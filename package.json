@@ -1,0 +1,16 @@
+{
+  "name": "uuu-ui",
+  "theme": "ui",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "A UI for UUU to customize",
+  "keywords": [
+    "ui",
+    "theme"
+  ],
+  "repository": "https://github.com/atom-community/ui-theme-template",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
