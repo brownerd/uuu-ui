@@ -8,9 +8,9 @@
 
 .status-bar {
   font-size: @font-size;
-  color: @text-color;
-  border-top: 1px solid @base-border-color;
-  background-color: @tree-view-background-color;
+  color: @lead;
+  //border-top: 1px solid @base-border-color;
+  background-color: @charcoal;
 
   & a {
     color: @status-bar-link-color;
@@ -20,4 +20,13 @@
       text-decoration: none;
     }
   }
+}
+
+
+
+
+// This is styling the Terminal Plus status-bar
+.bottom.tool-panel.panel-bottom,
+.bottom.tool-panel.panel-bottom .status-bar {
+  background-color: @carbon;
 }

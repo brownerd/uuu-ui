@@ -27,6 +27,9 @@
 @silver: hsla(0, 0%, 90%, 1);
 @graphite: hsla(0, 0%, 80%, 1);
 @lead: hsla(0, 0%, 60%, 1);
+@storm: hsla(0, 0%, 50%, 1);
+@tin: hsla(0, 0%, 30%, 1);
+@carbon: hsla(0, 0%, 25%, 1);
 @charcoal: hsla(0, 0%, 20%, 1);
 @black: hsla(0, 0%, 0%, 1);
 
@@ -42,7 +45,7 @@
 }
 
 
-@global-accent-color: @slime;
+@global-accent-color: @storm;
 
 // Base colors
 
@@ -114,7 +117,7 @@
 
 
 // Selects:
-//   and key-binding code backgrounds
+//   key-binding code backgrounds
 @app-background-color: @global-accent-color;
 
 
@@ -130,7 +133,7 @@
 
 
 // Selects input background colors
-@input-background-color: @lead;
+@input-background-color: @global-accent-color;
 
 
 // ?? nothing changes when I update this yet
@@ -180,7 +183,7 @@
 
 
 // This styles button backgrounds
-@button-background-color: @lead;
+@button-background-color: @global-accent-color;
 
 
 // Button hover color
@@ -234,7 +237,7 @@
 
 // Misc
 @component-border-radius: 2px;
-@font-family: 'Klavika-Condensed', '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: 'Klavika Condensed', '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
 
 
 

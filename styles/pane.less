@@ -3,6 +3,145 @@
 // press to see it shift+command+f
 
 .preview-pane .results-view {
-  background-color: @charcoal;
+  background-color: @lead;
   color: @graphite;
+}
+
+
+
+
+// Settings pane
+atom-pane-container atom-pane .item-views .pane-item {
+  background-color: @lead;
+  // background-image: repeating-linear-gradient(-45deg, @trans, @trans 5px, @carbon 5px, @carbon 6px);
+
+  // background-image: radial-gradient(@seethru 15%, @trans 16%), radial-gradient(@seethru 15%, @trans 16%);
+  // background-size: 30px 30px;
+  // background-position: 0 0, 15px 15px;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.settings-view {
+
+  .panels {
+    flex: none;
+    flex-flow: column;
+    display: flex;
+    position: relative;
+    min-width: 0;
+  }
+
+  // Settings menu on left hand side
+  .config-menu {
+    background-color: @trans;
+    display: flex;
+
+
+    flex: none;
+    /* min-width: 180px; */
+    max-width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    padding-top: 0;
+    border-right: 0;
+    /* overflow-x: auto; */
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+    }
+
+  .button-area {
+    margin: 0;
+
+    .btn {
+      color: red;
+      border-radius: none;
+      border: none;
+      text-shadow: none;
+      height: auto;
+      line-height: 1.5;
+      padding: 0;
+      font-size: 12px;
+      z-index: 0;
+      background-color: @trans;
+    }
+  }
+
+
+    a.icon,
+    button.icon {
+      color: @graphite;
+    }
+  }
+
+  // Main container holding a list of all packages
+  .section {
+    // Padding for this whole container
+    &:first-child,
+    &:last-child {
+      padding: 2rem;
+    }
+  }
+
+  .badge {
+    background-color: @global-accent-color;
+    color: @charcoal;
+  }
+
+  .sub-section .sub-section-heading {
+    color: @global-accent-color;
+  }
+
+
+  .package-card {
+    background-color: @trans;
+    border: 0;
+    border-radius: 0;
+    //border-bottom: 1px solid @charcoal;
+
+    &:hover {
+      background-color: @trans;
+    }
+
+    // Package heading link
+    .card-name {
+      a {
+        color: @global-accent-color;
+      }
+    }
+
+    // Package stats
+    .stats .stats-item .icon {
+      color: @global-accent-color;
+    }
+
+    // Package description color
+    .package-description,
+    .value {
+      color: @text-color;
+    }
+
+    // Author link color
+    .meta-user .author {
+      color: @global-accent-color;
+    }
+
+    a.icon,
+    button.icon {
+      color: @charcoal;
+    }
+
+    // A status indicator to the far right of
+    // the button group
+    .meta-controls .status-indicator {
+      //background-color: @trans;
+    }
+  }
 }

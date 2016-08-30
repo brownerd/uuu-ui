@@ -7,7 +7,7 @@
 
 atom-text-editor[mini] {
   padding-left: @component-padding/2;
-  color: @global-accent-color;
+  color: @text-color;
   border-radius: @component-border-radius;
   background-color: @input-background-color;
 
@@ -18,7 +18,7 @@ atom-text-editor[mini] {
   &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
   &::shadow {
     .placeholder-text {
-      color: @text-color-subtle;
+      color:  darken(@global-accent-color, 10%);
     }
     .selection .region {
       background-color: @background-color-selected;
