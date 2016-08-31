@@ -1,0 +1,182 @@
+
+.settings-view {
+
+  .panels {
+    flex: none;
+    flex-flow: column;
+    display: flex;
+    height: 100%;
+    min-width: 100%;
+    position: relative;
+  }
+
+
+
+  // Settings menu on left hand side
+  .config-menu {
+    background-color: @base-background-color;
+    //box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+    border-top: 1px solid darken(@base-background-color, 10%);
+    border-bottom: 1px solid darken(@base-background-color, 10%);
+    display: flex;
+    justify-content: space-between;
+    flex: none;
+    min-width: 100%;
+    max-width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    padding-top: 0;
+    border-right: 0;
+    overflow-y: scroll;
+
+    .nav {
+      background-color: @base-background-color;
+      display: flex;
+      justify-content: space-around;
+
+      & > li > a {
+        border-right: 1px solid darken(@base-background-color, 10%);
+        color: @text-color;
+
+        &:hover {
+          background-color: @global-accent-color;
+          color: @text-color;
+        }
+      }
+
+      & > li.active > a {
+        background-color: @global-accent-color;
+        color: @text-color;
+      }
+    }
+
+    .button-area {
+      background-color: @base-background-color;
+      margin: 0;
+      padding: 0;
+
+      .btn {
+        background-color: darken(@base-background-color, 10%);
+        border-radius: 0;
+        border: 0;
+        color: @text-color;
+        font-size: inherit;
+        height: 100%;
+        line-height: 1;
+        padding: 10px 15px;
+        text-shadow: none;
+        z-index: 0;
+
+        &:hover {
+          background-color: @global-accent-color;
+        }
+      }
+    }
+
+
+    a.icon,
+    button.icon {
+      color: @graphite;
+    }
+  }
+
+
+  // Ugh - the container
+  .section.section.settings-panel {
+    border-top: none;
+    padding: 2rem 0 0 0;
+  }
+
+
+  // each sheet
+  .section-container {
+    background-color: @white;
+    box-shadow: 0 10px 25px -16px #000;
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 4rem;
+  }
+
+  .select-container {
+    display: flex;
+    align-items: stretch;
+
+    .btn {
+      border-radius: 4px;
+      height: inherit;
+      margin-left: 4px;
+    }
+  }
+
+
+
+  // Main container holding a list of all packages
+  .section {
+    // Padding for this whole container
+    &:first-child,
+    &:last-child {
+      border-top: none;
+      padding: 2rem;
+    }
+
+
+    .section-heading {
+      color: @text-color;
+    }
+  }
+
+  .badge {
+    background-color: @global-accent-color;
+    color: @charcoal;
+  }
+
+  .sub-section .sub-section-heading {
+    color: @global-accent-color;
+  }
+
+
+  .package-card {
+    background-color: @trans;
+    border: 0;
+    border-radius: 0;
+    //border-bottom: 1px solid @charcoal;
+
+    &:hover {
+      background-color: @trans;
+    }
+
+    // Package heading link
+    .card-name {
+      a {
+        color: @global-accent-color;
+      }
+    }
+
+    // Package stats
+    .stats .stats-item .icon {
+      color: @global-accent-color;
+    }
+
+    // Package description color
+    .package-description,
+    .value {
+      color: @text-color;
+    }
+
+    // Author link color
+    .meta-user .author {
+      color: @global-accent-color;
+    }
+
+    a.icon,
+    button.icon {
+      color: @charcoal;
+    }
+
+    // A status indicator to the far right of
+    // the button group
+    .meta-controls .status-indicator {
+      //background-color: @trans;
+    }
+  }
+}

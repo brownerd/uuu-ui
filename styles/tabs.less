@@ -6,19 +6,29 @@
 // Overrides: atom/tabs
 
 .tab-bar {
-  background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
+  background-color: @tab-background-color;
+  border: none;
+  //border-bottom: 1px solid darken(@tab-background-color, 10%);
 
   .tab {
-    color: @graphite;
+    color: @tab-text-color;
     height: @tab-height;
     line-height: @tab-height;
     font-size: @font-size;
-    border-right: 1px solid @black;
+    border-right: 1px solid darken(@tab-background-color, 10%);
     background-color: @tab-background-color;
+
+    &:hover {
+      background-color: @global-accent-color;
+    }
+
     &.active {
-      color: @text-color-selected;
-      background-color: @tab-background-color-active;
+      color: @text-color;
+      background-color: @base-background-color;
+
+      &:hover {
+        background-color: @global-accent-color;
+      }
     }
 
 
