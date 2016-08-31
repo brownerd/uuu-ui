@@ -6,8 +6,9 @@
 
 
 .btn {
-  color: lighten(@text-color, 6%);
+  //color: @button-text-color;
   background-color: @button-background-color;
+  border: 1px solid @button-border-color;
   //line-height: 44px;
 
   &:hover,
@@ -61,8 +62,31 @@
 // Button Group -----------------------
 
 .btn-group > .btn {
-  border-color: hsla(0,0%,0%,.2);;
+
+  border-left: 1px solid @button-border-color;
+  border-right: 1px solid @button-border-color;
+
+  color: @button-text-color;
+
+  &:first-child {
+    border-left: 1px solid @button-border-color;
+  }
+
+  &:last-child {
+    border-right: 1px solid @button-border-color;
+  }
 }
 
 
-// Look on pane.less for button settings for the Settings pane
+
+.btn-wrap-group .btn {
+  color: @button-text-color;
+}
+
+
+
+a.icon,
+button.icon {
+  // border: 1px solid @button-border-color;
+  //color: @button-text-color;
+}

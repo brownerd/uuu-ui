@@ -1,0 +1,32 @@
+.settings-view {
+  .keybinding-panel.section {
+    background-color: @base-background-color;
+    margin: 2rem;
+  }
+
+
+  .table th {
+    border-color: @base-background-color-offset;
+  }
+
+
+  tr {
+
+    &:nth-child(even) {
+      background-color: lighten(@base-background-color, 2%);
+    }
+
+    &:hover {
+      background-color: @global-accent-color;
+    }
+  }
+
+
+  .table td {
+    border: 0;
+    border-color: @trans;
+    vertical-align: middle;
+    white-space: wrap;
+  }
+
+}

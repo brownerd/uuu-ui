@@ -39,10 +39,21 @@
 
 @seethru: hsla(0, 0%, 0%, .1);
 
-.test {
-  background-color: @slime;
-  color: @magenta;
+
+
+
+
+.color(@color, @value: 0) {
+  color: lighten(@color, (@value / 2) * 1%);
 }
+
+.backgroundColor(@color, @value: 0) {
+  background-color: lighten(@color, (@value / 2)* 1%);
+}
+
+
+
+
 
 
 @global-accent-color: @slime;
@@ -69,6 +80,10 @@
 //     not modified by get colors
 //     not gitignored
 @text-color: @charcoal;
+
+@heading-color: @charcoal;
+@link-button-text-color: @charcoal;
+
 
 
 // This styles:
@@ -135,8 +150,10 @@
 @pane-item-border-color: @purple;
 
 
+
+
 // Selects input background colors
-@input-background-color: @global-accent-color;
+@input-background-color: @base-background-color-offset;
 
 
 // ?? nothing changes when I update this yet
@@ -185,14 +202,15 @@
 
 
 
+@button-text-color: @global-accent-color;
 // This styles button backgrounds
-@button-background-color: @global-accent-color;
+@button-background-color: @base-background-color;
 
 
 // Button hover color
 @button-background-color-hover: @charcoal;
 @button-background-color-selected: @global-accent-color;
-@button-border-color: @purple;
+@button-border-color: darken(@base-background-color, 10%);
 
 
 
@@ -242,7 +260,7 @@
 
 // Misc
 @component-border-radius: 2px;
-@font-family: 'Klavika Condensed', '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: 'Klavika', '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
 
 
 
