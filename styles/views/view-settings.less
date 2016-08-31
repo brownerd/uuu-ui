@@ -1,6 +1,10 @@
 
 .settings-view {
 
+  .text {
+    color: @text-color;
+  }
+
   .panels {
     flex: none;
     flex-flow: column;
@@ -32,11 +36,19 @@
     .nav {
       background-color: @base-background-color;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      width: 100%;
+
+      & > li {
+        text-align: center;
+        width: 100%;
+      }
 
       & > li > a {
         border-right: 1px solid darken(@base-background-color, 10%);
         color: @text-color;
+        width: 100%;
+        display: block;
 
         &:hover {
           background-color: @global-accent-color;
@@ -90,8 +102,9 @@
 
   // each sheet
   .section-container {
-    background-color: @white;
-    box-shadow: 0 10px 25px -16px #000;
+    background-color: @base-background-color;
+    border: 1px solid darken(@base-background-color, 10%);
+    // box-shadow: 0 10px 25px -16px #000;
     margin: 0 auto;
     max-width: 850px;
     padding: 4rem;
