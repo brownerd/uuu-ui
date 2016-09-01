@@ -223,7 +223,7 @@
     .bgcolor(@background-color, @value-background-color);
     background-color: @bgcolor;
     &:hover {
-      background-color: bgcolor;
+      background-color: @bgcolor;
     }
   }
 
@@ -237,7 +237,7 @@
     //border-bottom: 1px solid @charcoal;
 
     &:hover {
-      background-color: bgcolor;
+      background-color: @bgcolor;
     }
 
     // Package heading link
@@ -245,6 +245,15 @@
       a {
         color: @purple;
       }
+    }
+
+
+    &.disabled {
+      .bordercolor(@background-color, @value-border-color);
+
+      .bgcolor(@background-color, @value-background-color);
+      background-color: @bgcolor;
+      background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
     }
 
     // Package stats

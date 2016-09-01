@@ -1,10 +1,22 @@
-
 // Find + Replace
 // -------------------
+
+// This is the panel that pops up from the bottom when you press
+// command + f
 
 // Find and replace in the current buffer or across the entire project.
 // Overrides: atom/find-and-replace
 
 .find-and-replace {
-  border-top: 1px solid @base-border-color;
+
+  .bgcolor(@background-color, @value-nav);
+  background-color: @bgcolor;
+
+  .bordercolor(@background-color, @value-border-color);
+  border-color: @bordercolor;
+  border-top: 1px solid @bordercolor;
+
+  .color(@text-color, @value-text-color);
+  color: @color;
+
 }

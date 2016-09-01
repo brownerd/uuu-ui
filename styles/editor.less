@@ -1,33 +1,3 @@
-/*
-@text-color
-@heading-color
-@background-color
-@button-color
-@accent-color
-
-// Color
-.color(@text-color, @value-text-color);
-color: @color;
-
-.color(@heading-color, @value-heading-color);
-color: @color;
-
-.color(@button-color, @value-button-color);
-color: @color;
-
-
-// Background
-.bgcolor(@background-color, @value-background-color);
-background-color: @bgcolor;
-
-.bgcolor(@button-color, @value-button-color);
-background-color: @bgcolor;
-
-.bordercolor(@background-color, @value-border-color);
-border-color: @bordercolor;
-*/
-
-
 // Mini Editor
 // -------------------
 
@@ -36,10 +6,10 @@ border-color: @bordercolor;
 
 atom-text-editor[mini] {
 
-  .bgcolor(@background-color, @value-background-color);
+  .bgcolor(@text-color, @value-background-color);
   background-color: @bgcolor;
 
-  .color(@text-color, @value-text-color);
+  .color(@button-color, @value-text-color);
   color: @color;
 
   border-radius: @component-border-radius;
@@ -47,15 +17,18 @@ atom-text-editor[mini] {
   padding: @component-padding;
 
   &.is-focused {
-    .bgcolor(@background-color, @value-background-color);
-    background-color: darken(@bgcolor, 5%);
+    .bgcolor(@button-color, @value-background-color);
+    background-color: @bgcolor;
+
+    .color(@text-color, @value-text-color);
+    color: @color;
   }
 
   &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
   &::shadow {
     .placeholder-text {
-      .color(@text-color, @value-text-color);
-      color:  darken(@color, 10%);
+      .color(@button-color, @value-border-color);
+      color: @color;
     }
     .selection .region {
       .bgcolor(@background-color, @value-background-color);

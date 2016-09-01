@@ -1,4 +1,5 @@
 
+
 // Status Bar
 // -------------------
 
@@ -7,16 +8,23 @@
 // Overrides: atom/status-bar
 
 .status-bar {
-  font-size: @font-size;
-  color: @lead;
+  .bgcolor(@text-color, @value-background-color);
+  background-color: @bgcolor;
+
   //border-top: 1px solid @base-border-color;
-  background-color: @charcoal;
+
+  .color(@background-color, @value-text-color);
+  color: @color;
+
+  font-size: @font-size;
 
   & a {
-    color: @purple;
+    .color(@accent-color, @value-accent-color);
+    color: @color;
 
     &:hover {
-      color: @purple;
+      .color(@accent-color, @value-accent-color);
+      color: @color;
       text-decoration: none;
     }
   }
@@ -28,5 +36,6 @@
 // This is styling the Terminal Plus status-bar
 .bottom.tool-panel.panel-bottom,
 .bottom.tool-panel.panel-bottom .status-bar {
-  background-color: @purple;
+  .bgcolor(@background-color, @value-nav);
+  background-color: @bgcolor;
 }

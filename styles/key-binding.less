@@ -1,3 +1,39 @@
+/*
+@text-color
+@heading-color
+@background-color
+@button-color
+@accent-color
+
+// Color
+.color(@text-color, @value-text-color);
+color: @color;
+
+.color(@heading-color, @value-heading-color);
+color: @color;
+
+.color(@button-color, @value-button-color);
+color: @color;
+
+.color(@accent-color, @value-accent-color);
+color: @color;
+
+
+// Background
+.bgcolor(@background-color, @value-background-color);
+background-color: @bgcolor;
+
+.bgcolor(@button-color, @value-button-color);
+background-color: @bgcolor;
+
+.bordercolor(@background-color, @value-border-color);
+border-color: @bordercolor;
+
+.bgcolor(@accent-color, @value-accent-color);
+background-color: @bgcolor;
+*/
+
+
 
 // Key Binding
 // -------------------
@@ -7,14 +43,19 @@
 
 
 .key-binding {
+  .bgcolor(@accent-color, @value-accent-color);
+  background-color: @bgcolor;
+
+  border-radius: @component-border-radius;
+
+  .color(@text-color, @value-text-color);
+  color: @color;
+
   display: inline-block;
+  font-size: .8em;
   margin-left: 1px;
   padding: 0 @component-padding/2;
   line-height: 2;
   //font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: .8em;
   letter-spacing: 1px;
-  border-radius: @component-border-radius;
-  background-color: @purple;
-  color: @purple;
 }

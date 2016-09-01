@@ -1,7 +1,11 @@
 // All panes
 atom-pane-container atom-pane .item-views .pane-item {
-  background-color: @base-background-color;
-  color: @text-color;
+  .bgcolor(@background-color, @value-background-color);
+  background-color: @bgcolor;
+
+  .bgcolor(@background-color, @value-background-color);
+  background-color: @bgcolor;
+
   display: flex;
   flex-direction: column;
 

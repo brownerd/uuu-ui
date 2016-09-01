@@ -1,10 +1,42 @@
+/*
+@text-color
+@heading-color
+@background-color
+@button-color
+@accent-color
+
+// Color
+.color(@text-color, @value-text-color);
+color: @color;
+
+.color(@heading-color, @value-heading-color);
+color: @color;
+
+.color(@button-color, @value-button-color);
+color: @color;
+
+
+// Background
+.bgcolor(@background-color, @value-background-color);
+background-color: @bgcolor;
+
+.bgcolor(@button-color, @value-button-color);
+background-color: @bgcolor;
+
+.bordercolor(@background-color, @value-border-color);
+border-color: @bordercolor;
+*/
+
 
 // Git
 // -------------------
 
 // Used to color git status
 
-.status          { color: @text-color; }
+.status {
+  .color(@text-color, @value-text-color);
+  color: @color;
+}
 .status-added    { color: @text-color-success; }
 .status-ignored  { color: @text-color-subtle; }
 .status-modified { color: @text-color-warning; }

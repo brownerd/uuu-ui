@@ -1,3 +1,39 @@
+/*
+@text-color
+@heading-color
+@background-color
+@button-color
+@accent-color
+
+// Color
+.color(@text-color, @value-text-color);
+color: @color;
+
+.color(@heading-color, @value-heading-color);
+color: @color;
+
+.color(@button-color, @value-button-color);
+color: @color;
+
+.color(@accent-color, @value-accent-color);
+color: @color;
+
+
+// Background
+.bgcolor(@background-color, @value-background-color);
+background-color: @bgcolor;
+
+.bgcolor(@button-color, @value-button-color);
+background-color: @bgcolor;
+
+.bordercolor(@background-color, @value-border-color);
+border-color: @bordercolor;
+
+.bgcolor(@accent-color, @value-accent-color);
+background-color: @bgcolor;
+*/
+
+
 
 // Tabs
 // -------------------
@@ -6,35 +42,51 @@
 // Overrides: atom/tabs
 
 .tab-bar {
-  background-color: @purple;
+  .bgcolor(@background-color, @value-nav);
+  background-color: @bgcolor;
+
   border: none;
   //border-bottom: 1px solid darken(@tab-background-color, 10%);
 
   &:hover {
-    background-color: lighten(@tree-view-background-color, 5%);
+    .bgcolor(@background-color, @value-background-color);
+    background-color: lighten(@bgcolor, 5%);
   }
 
   .tab {
-    background-color: @tab-background-color;
-    border-right: 1px solid darken(@tab-background-color, 10%);
-    color: @purple;
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @trans;
+
+    .bordercolor(@background-color, @value-border-color);
+    border-color: @bordercolor;
+
+    border-right: 1px solid bordercolor;
+
+    .color(@text-color, @value-text-color);
+    color: @color;
+
     font-size: @font-size;
     height: @tab-height;
     line-height: @tab-height;
 
 
     &:hover {
-      background-color: @purple;
+      .bgcolor(@background-color, @value-background-color);
+      background-color: darken(@bgcolor, 5%);
     }
 
 
     &.active {
-      color: @text-color;
-      background-color: @base-background-color;
+      .bgcolor(@accent-color, @value-accent-color);
+      background-color: @bgcolor;
 
-      &:hover {
-        background-color: @purple;
-      }
+      .color(@text-color, @value-text-color);
+      color: @color;
+
+      // &:hover {
+      //   .bgcolor(@background-color, @value-background-color);
+      //   background-color: darken(@bgcolor, 5%);
+      // }
     }
 
 

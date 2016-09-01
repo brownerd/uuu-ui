@@ -1,19 +1,28 @@
-
 // Panels
 // -------------------
 
 // Overrides: atom/static/panels.less
 
 .panel-heading {
-  border-bottom: 1px solid @panel-heading-border-color;
-  background-color: @panel-heading-background-color;
-  color: @purple;
+  .bordercolor(@background-color, @value-border-color);
+  border-color: @bordercolor;
+  border-bottom: 1px solid @bordercolor;
+
+
+  .bgcolor(@background-color, @value-background-color);
+  background-color: @bgcolor;
+
+  .color(@text-color, @value-text-color);
+  color: @color;
 }
 
 .inset-panel {
-  background-color: @inset-panel-background-color;
+  .bgcolor(@background-color, @value-background-color);
+  background-color: @bgcolor;
+
   .panel-heading {
-    background-color: lighten(@inset-panel-background-color, 4%);
+    .bgcolor(@background-color, @value-background-color);
+    background-color: lighten(@bgcolor, 4%);
   }
 }
 
@@ -22,18 +31,73 @@
 // Modal -------------------
 // Used on top of the editor, like the Command Palette.
 
+
 atom-panel.modal {
-  border: 1px solid @overlay-border-color;
+  .bgcolor(@background-color, @value-nav);
+  background-color: @bgcolor;
+
+
+  .bordercolor(@background-color, @value-border-color);
+  border-color: @bordercolor;
+  border: 1px solid @bordercolor;
   border-top: none;
-  box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+  //box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+  box-shadow: none;
+
+  .color(@text-color, @value-text-color);
+  color: @color;
+
+  padding: @tab-height / 2;
+
+
+  // &:after {
+  //   content: '';
+  //
+  //   .bordercolor(@background-color, @value-border-color);
+  //
+  //   .bgcolor(@background-color, @value-background-color);
+  //   background-color: alpha(@bgcolor, 50%);
+  //   background-image: repeating-linear-gradient(-45deg, @trans, @trans 17px, @bordercolor 17px, @bordercolor 18px);
+  //
+  //   height: 100vh;
+  //   width: 500vh;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   z-index:-100;
+  // }
 }
 
+.select-list {
+  .bgcolor(@background-color, @value-nav);
+  background-color: @bgcolor;
 
+  ol.list-group li {
+    .bordercolor(@background-color, @value-background-color);
+    border-bottom: 1px solid @bordercolor;
+  }
+}
+
+.list-group li.selected {
+  .bgcolor(@background-color, @value-nav);
+  background-color: @bgcolor;
+
+  .color(@accent-color, @value-accent-color);
+  color: @color;
+}
 
 
 // Panel that slides up from the bottom during:
 //   - search
 //   - terminal
-.tool-panel, atom-panel {
-  background-color: @charcoal;
-}
+
+// .tool-panel, atom-panel {
+//   .bgcolor(@background-color, @value-nav);
+//   background-color: @red;
+// }
+
+
+// .bottom.tool-panel.panel-bottom {
+//   .bgcolor(@background-color, @value-nav);
+//   background-color: @bgcolor;
+// }
