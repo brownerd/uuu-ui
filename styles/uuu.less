@@ -43,207 +43,122 @@
 
 
 
-.color(@color, @value: 0) {
-  color: lighten(@color, (@value / 2) * 1%);
+.color(@kolor, @value: 0) {
+  @color: lighten(@kolor, (@value / 2) * 1%);
 }
 
-.backgroundColor(@color, @value: 0) {
-  background-color: lighten(@color, (@value / 2)* 1%);
+.bgcolor(@kolor, @value: 0) {
+  @bgcolor: lighten(@kolor, (@value / 2) * 1%);
 }
 
+.bordercolor(@kolor, @value: 0) {
+  @bordercolor: lighten(@kolor, (@value / 2) * 1%);
+}
+
+// .color(@base-background-color)
+// color: @color;
+//
+// .bgcolor(@base-background-color)
+// background-color: @bgcolor;
+//
+// .bordercolor(@base-background-color)
+// border-color: @bordercolor;
+
+
+
+@text-color: @charcoal;
+@heading-color: @red;
+@background-color: @graphite;
+@button-color: @gold;
+@accent-color: @slime;
+
+
+@value-text-color: 0;
+@value-heading-color: 0;
+@value-background-color: 0;
+@value-border-color: -25;
+@value-button-color: 0;
+@value-accent-color: 0;
 
 
 
 
+// UI Variables
+// -------------------
 
-@global-accent-color: @slime;
+// These are the official UI variables that every UI theme should define.
+// It allows other packages to match your theme.
 
-// @global-active-background: @graphite;
+// Overrides: atom/static/variables/ui-variables.less
+
+// Try to edit some of the values below to see your theme change.
+// A good start is to change the color of the `@base-background-color` variable.
+
+
+// Text Colors
+// @text-color: @background-color;
+@text-color-subtle: @background-color;
+@text-color-highlight: @background-color;
+@text-color-selected: @background-color;
+
+@text-color-info:    hsl(219,  79%, 66%);
+@text-color-success: hsl(140,  44%, 62%);
+@text-color-warning: hsl( 36,  60%, 72%);
+@text-color-error:   hsl(  9, 100%, 64%);
+
+// Background colors
+@background-color-info:    hsl(208, 100%, 50%);
+@background-color-success: hsl(160,  70%, 36%);
+@background-color-warning: hsl(32,   60%, 50%);
+@background-color-error:   hsl(0,    70%, 50%);
+
+@background-color-highlight: @background-color;
+@background-color-selected: @background-color;
+@app-background-color: @background-color;
 
 // Base colors
-
-// Base background color used throughout the
-// entire iui theme
-@base-background-color: @storm;
-@base-background-color-offset: @tin;
-
-
-// Base border color used on most pieces of
-// the ui theme
-@base-border-color: @base-background-color;
-
-
-//  This styles:
-//   Top nav tab text
-//   Tree view filenames that are:
-//     not selected
-//     not modified by get colors
-//     not gitignored
-@text-color: @charcoal;
-
-@heading-color: @charcoal;
-@link-button-text-color: @charcoal;
-
-
-
-// This styles:
-//   git ignored files
-//   placeholder text inside inputs
-@text-color-subtle: @graphite;
-
-
-// This selects the text that shows up insinde:
-//   The Project Find Panel - search term text
-@text-color-highlight: @charcoal; // Not sure about this yet
-
-
-// This styles:
-//   selected tab text
-//   selected options
-@text-color-selected:  @text-color;
-
-
-// ??
-@text-color-info:    @blue;
-@text-color-success: @slime;
-@text-color-warning: @gold;
-@text-color-error:   @red;
-
-
-// ??
-// Background colors
-
-
-// This selects:
-//   Search text in Project Find Results
-@background-color-info:    @global-accent-color;
-
-
-
-@background-color-success: @slime;
-@background-color-warning: @gold;
-@background-color-error:   @red;
-
-
-// I only see this in the message to press the
-// "esc" key when the Seach Panel is open
-@background-color-highlight: @global-accent-color;
-
-
-// Selected option background color
-@background-color-selected: @lead;
-
-
-// Selects:
-//   key-binding code backgrounds
-@app-background-color: @global-accent-color;
-
-
+@base-background-color: @background-color;
+@base-border-color: @background-color;     // Base border set here
 
 // Component colors
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: @base-border-color;
 
-// ?? not seeing this yet
-@pane-item-background-color: @purple;
+@input-background-color: @base-background-color;
+@input-border-color: @base-border-color;
 
+@tool-panel-background-color: @base-background-color;
+@tool-panel-border-color: @base-border-color;
 
-// ?? not seeing this yet
-@pane-item-border-color: @purple;
+@inset-panel-background-color: @base-background-color;
+@inset-panel-border-color: @base-border-color;
 
+@panel-heading-background-color: @base-background-color;
+@panel-heading-border-color: @base-border-color;
 
+@overlay-background-color: @base-background-color;
+@overlay-border-color:     @base-border-color;
 
-
-// Selects input background colors
-@input-background-color: @base-background-color-offset;
-
-
-// ?? nothing changes when I update this yet
-@input-border-color: @purple;
-
-
-// ?? nothing changes when I update this yet
-@tool-panel-background-color: @purple;
-
-
-// ?? nothing changes when I update this yet
-@tool-panel-border-color: @purple;
-
-
-
-
-// ?? I only see this in the styleguide
-@inset-panel-background-color: @lead;
-
-
-// ?? I only see this in the styleguide Panel section
-@inset-panel-border-color: @purple;
-
-
-
-
-@panel-heading-color: @charcoal;
-
-// This selects the baclground of the panel that shows up
-// when there is a Project Find Result
-@panel-heading-background-color: @lead;
-
-
-// ?? I only see this in the styleguide Panel section
-@panel-heading-border-color: @lead;
-
-
-// ?? I only see this in the styleguide Popover List section
-@overlay-background-color: @lead;
-
-
-// This styles the border around:
-//   Command Palette modal
-@overlay-border-color: @lead;
-
-
-
-
-@button-text-color: @global-accent-color;
-// This styles button backgrounds
 @button-background-color: @base-background-color;
+@button-background-color-hover: @base-background-color;
+@button-background-color-selected: @button-background-color-hover;
+@button-border-color: @base-border-color;
 
+@tab-bar-background-color: @base-background-color;
+@tab-bar-border-color: @base-border-color;
+@tab-background-color: @tab-bar-background-color;
+@tab-background-color-active: @tab-bar-background-color;
+@tab-border-color: @base-border-color;
 
-// Button hover color
-@button-background-color-hover: @charcoal;
-@button-background-color-selected: @global-accent-color;
-@button-border-color: darken(@base-background-color, 10%);
-
-
-
-// Selected Tab in the top nav
-// DOT need this
-// @tab-bar-background-color: @purple;
-
-
-@tab-text-color: @text-color;
-
-@tab-bar-border-color: @purple;
-
-// Not selected tab in top nav
-@tab-background-color: @trans;
-
-// Selected Tab in the top nav
-@tab-background-color-active: @base-background-color-offset;
-@tab-border-color: @base-background-color-offset;
-
-
-// This is the side-bar that shows the directories and
-// files
-@tree-view-background-color: @base-background-color-offset;
-@tree-view-border-color: @base-background-color-offset;
-
-
+@tree-view-background-color: @base-background-color;
+@tree-view-border-color: @base-border-color;
 
 // Site colors
-@ui-site-color-1: @blue;
-@ui-site-color-2: @ice;
-@ui-site-color-3: @purple;
-@ui-site-color-4: @magenta;
-@ui-site-color-5: @gold;
+@ui-site-color-1: hsl(208, 100%, 50%); // blue
+@ui-site-color-2: hsl(160,  70%, 42%); // green
+@ui-site-color-3: hsl(32,   60%, 50%); // orange
+@ui-site-color-4: #D831B0;             // pink
+@ui-site-color-5: #EBDD5B;             // yellow
 
 // Sizes
 @font-size: 12px;
@@ -260,17 +175,4 @@
 
 // Misc
 @component-border-radius: 2px;
-@font-family: 'Klavika', '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-
-
-
-// Status bar
-// Located at the bottom.
-// Displays information about the current editor.
-@status-bar-link-color: @global-accent-color;
-@status-bar-link-hover-color: @gold;
-
-
-
-@key-binding-background-color: @global-accent-color;
-@key-binding-text-color: @charcoal;
+@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

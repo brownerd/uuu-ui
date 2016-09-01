@@ -1,32 +1,48 @@
 .settings-view {
+
+  .section .section-heading {
+    .color(@heading-color, @value-heading-color);
+    color: @color;
+  }
+
+
   .keybinding-panel.section {
-    background-color: @base-background-color;
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
     margin: 2rem;
   }
 
 
   .table th {
-    border-color: @base-background-color-offset;
+    .bordercolor(@background-color, @value-border-color);
+    border-color: @bordercolor;
   }
 
 
   tr {
 
     &:nth-child(even) {
-      background-color: lighten(@base-background-color, 2%);
+      .bgcolor(@background-color, @value-background-color);
+      background-color: @bgcolor;
     }
 
     &:hover {
-      background-color: @global-accent-color;
+      .bgcolor(@button-color, @value-button-color);
+      background-color: @bgcolor;
     }
   }
 
 
   .table td {
-    border: 0;
-    border-color: @trans;
+    .bordercolor(@background-color, @value-border-color);
+    border-color: @bordercolor;
+    //border: 0;
+
+    .color(@text-color, @value-text-color);
+    color: @color;
+
     vertical-align: middle;
-    white-space: wrap;
+    white-space: initial;
   }
 
 }

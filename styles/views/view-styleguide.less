@@ -3,35 +3,45 @@
   .styleguide-header {
 
     h1 {
-      color: @text-color;
+      .color(@heading-color, @value-heading-color);
+      color: @color;
     }
 
     p:last-of-type {
-      color: @text-color;
+      .color(@text-color, @value-text-color);
+      color: @color;
     }
   }
 
 
   .section-heading.section-heading {
-    color: @text-color;
+    .color(@heading-color, @value-heading-color);
+    color: @color;
   }
-  
+
 
   section {
-    background-color: @trans;
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
 
     h2 {
-      color: @text-color;
+      .color(@heading-color, @value-heading-color);
+      color: @color;
     }
 
     p {
-      color: @text-color;
+      .color(@text-color, @value-text-color);
+      color: @color;
     }
   }
 
 
   .example .example-rendered {
-    background-color: @trans;
-    border: 0;
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
+
+    .bordercolor(@background-color, @value-border-color);
+    border-color: @bordercolor;
+    //border: 0;
   }
 }

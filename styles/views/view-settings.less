@@ -1,13 +1,11 @@
-
-
 .settings-view {
-
 
   .breadcrumb {
 
     & > li a {
-      //color: @global-accent-color;
-      .color(@global-accent-color, -20);
+      .color(@button-color, @value-button-color);
+      color: @color;
+
 
       &::after {
         content:'>'
@@ -15,24 +13,30 @@
     }
 
     & > .active a {
-      color: @global-accent-color;
+      .color(@button-color, @value-button-color);
+      color: @color;
     }
   }
 
 
   .text {
-    color: @text-color;
+    .color(@text-color, @value-text-color);
+    color: @color;
   }
 
   .link {
-    color: @global-accent-color;
+    .color(@button-color, @value-button-color);
+    color: @color;
   }
 
   .alert-info {
-    color: @global-accent-color;
+    .color(@text-color, @value-text-color);
+    color: @color;
+
     border: 0;
     border-color: none;
-    background-color: @text-color;
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
   }
 
   .panels {
@@ -48,10 +52,14 @@
 
   // Settings menu on left hand side
   .config-menu {
-    background-color: @base-background-color;
-    //box-shadow: 1px 0 5px rgba(0,0,0,0.5);
-    border-top: 1px solid darken(@base-background-color, 10%);
-    border-bottom: 1px solid darken(@base-background-color, 10%);
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
+
+    .bordercolor(@background-color, @value-border-color);
+    border-color: @bordercolor;
+    border-top: 1px solid @bordercolor;
+    border-bottom: 1px solid @bordercolor;
+
     display: flex;
     justify-content: space-between;
     flex: none;
@@ -64,13 +72,16 @@
     overflow-y: scroll;
 
     .nav {
-      background-color: @base-background-color;
+      .bgcolor(@background-color, @value-background-color);
+      background-color: @bgcolor;
+
       display: flex;
       justify-content: space-between;
       width: 100%;
 
       &:hover {
-        background-color: lighten(@base-background-color, 10%);
+        .bgcolor(@background-color, @value-background-color);
+        background-color: @bgcolor;
       }
 
       & > li {
@@ -79,33 +90,51 @@
       }
 
       & > li > a {
-        border-right: 1px solid darken(@base-background-color, 10%);
-        color: @text-color;
+        .bordercolor(@background-color, @value-border-color);
+        border-color: @bordercolor;
+        border-right: 1px solid @bordercolor;
+
+        .color(@text-color, @value-text-color);
+        color: @color;
+
         width: 100%;
         display: block;
 
         &:hover {
-          background-color: @global-accent-color;
-          color: @text-color;
+          .bgcolor(@button-color, @value-button-color);
+          background-color: @bgcolor;
+
+          .color(@text-color, @value-text-color);
+          color: @color;
         }
       }
 
       & > li.active > a {
-        background-color: @global-accent-color;
-        color: @text-color;
+        .bgcolor(@button-color, @value-button-color);
+        background-color: @bgcolor;
+
+        .color(@text-color, @value-text-color);
+        color: @color;
       }
     }
 
     .button-area {
-      background-color: @base-background-color;
+      .bgcolor(@background-color, @value-background-color);
+      background-color: @bgcolor;
+
       margin: 0;
       padding: 0;
 
       .btn {
-        background-color: darken(@base-background-color, 10%);
+        .bgcolor(@button-color, @value-button-color);
+        background-color: @bgcolor;
+
         border-radius: 0;
         border: 0;
-        color: @text-color;
+
+        .color(@button-color, @value-button-color);
+        color: @color;
+
         font-size: inherit;
         height: 100%;
         line-height: 1;
@@ -114,7 +143,8 @@
         z-index: 0;
 
         &:hover {
-          background-color: @global-accent-color;
+          .bgcolor(@button-color, @value-button-color);
+          background-color: @bgcolor;
         }
       }
     }
@@ -136,8 +166,13 @@
 
   // each sheet
   .section-container {
-    background-color: @base-background-color;
-    border: 1px solid darken(@base-background-color, 10%);
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
+
+    .bordercolor(@background-color, @value-border-color);
+    border-color: @bordercolor;
+    border: 1px solid @bordercolor;
+
     // box-shadow: 0 10px 25px -16px #000;
     margin: 0 auto;
     max-width: 850px;
@@ -172,47 +207,63 @@
     }
   }
 
-  .badge {
-    background-color: @global-accent-color;
-    color: @charcoal;
-  }
+  // .badge {
+  //   background-color: @purple;
+  //   color: @charcoal;
+  // }
 
   .sub-section .sub-section-heading {
-    color: @global-accent-color;
+    .color(@heading-color, @value-heading-color);
+    color: @color;
+  }
+
+
+  .package-detail .package-card:hover {
+
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
+    &:hover {
+      background-color: bgcolor;
+    }
   }
 
 
   .package-card {
-    background-color: @trans;
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
+
     border: 0;
     border-radius: 0;
     //border-bottom: 1px solid @charcoal;
 
     &:hover {
-      background-color: @trans;
+      background-color: bgcolor;
     }
 
     // Package heading link
     .card-name {
       a {
-        color: @global-accent-color;
+        color: @purple;
       }
     }
 
     // Package stats
     .stats .stats-item .icon {
-      color: @text-color;
+      .color(@text-color, @value-text-color);
+      color: @color;
     }
 
     // Package description color
     .package-description,
     .value {
-      color: @text-color;
+      .color(@text-color, @value-text-color);
+      color: @color;
     }
 
     // Author link color
     .meta-user .author {
-      color: @global-accent-color;
+      .color(@button-color, @value-button-color);
+      color: @color;
     }
 
 
@@ -227,6 +278,7 @@
 
 
   input[type="checkbox"]:checked {
-    background-color: @global-accent-color;
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
   }
 }
