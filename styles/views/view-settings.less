@@ -101,7 +101,7 @@
         display: block;
 
         &:hover {
-          .bgcolor(@button-color, @value-button-color);
+          .bgcolor(@accent-color, @value-accent-color);
           background-color: @bgcolor;
 
           .color(@text-color, @value-text-color);
@@ -110,7 +110,7 @@
       }
 
       & > li.active > a {
-        .bgcolor(@button-color, @value-button-color);
+        .bgcolor(@accent-color, @value-accent-color);
         background-color: @bgcolor;
 
         .color(@text-color, @value-text-color);
@@ -126,13 +126,13 @@
       padding: 0;
 
       .btn {
-        .bgcolor(@button-color, @value-button-color);
+        .bgcolor(@background-color, @value-background-color);
         background-color: @bgcolor;
 
         border-radius: 0;
         border: 0;
 
-        .color(@button-color, @value-button-color);
+        .color(@text-color, @value-text-color);
         color: @color;
 
         font-size: inherit;
@@ -203,14 +203,11 @@
 
 
     .section-heading {
-      color: @text-color;
+      .color(@heading-color, @value-heading-color);
+      color: @color;
     }
   }
 
-  // .badge {
-  //   background-color: @purple;
-  //   color: @charcoal;
-  // }
 
   .sub-section .sub-section-heading {
     .color(@heading-color, @value-heading-color);

@@ -16,7 +16,7 @@
 
       .color(@button-color, @value-button-color);
       color: @color;
-      
+
       &:before{ display: none; }
     }
   }
@@ -53,23 +53,55 @@
 
 
 // Popover List -------------------
+// You see this when you click on the gear on the Mini scroll nav
+
+
 // Used as a popover for something like autocomplete.
+
+
 .select-list.popover-list {
   @popover-list-padding: @component-padding/2;
 
 
   border-radius: @component-border-radius;
 
-  .bgcolor(@magenta, @value-background-color);
+  .bgcolor(@background-color, @value-background-color);
   background-color: @bgcolor;
   box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+
+  .color(@text-color, @value-text-color);
+  color: @color;
 
   padding: @popover-list-padding;
 
   .list-group {
     margin-top: @popover-list-padding;
+
     li {
       padding-left: @popover-list-padding;
+
+      &:hover {
+        .bgcolor(@background-color, @value-background-color);
+        color: @bgcolor;
+      }
+
+      &.selected {
+        .bgcolor(@accent-color, @value-accent-color);
+        background-color: @bgcolor;
+
+        .color(@text-color, @value-text-color);
+        color: @color;
+      }
     }
   }
 }
+
+
+// <div class='select-list popover-list'>
+//     <atom-text-editor mini>'User types here..'</atom-text-editor>
+//     <ol class='list-group'>
+//         <li class='selected'>one</li>
+//         <li>two</li>
+//         <li>three</li>
+//     </ol>
+// </div>

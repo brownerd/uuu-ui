@@ -6,28 +6,32 @@
 
 atom-text-editor[mini] {
 
-  .bgcolor(@text-color, @value-background-color);
+  .bgcolor(@text-color, @value-text-color);
   background-color: @bgcolor;
 
-  .color(@button-color, @value-text-color);
+  .color(@background-color, @value-background-color);
   color: @color;
+
+  .bordercolor(@background-color, @value-border-color);
+  border: 1px solid @bordercolor;
+
 
   border-radius: @component-border-radius;
   max-height: 42px;
-  padding: @component-padding;
+  padding: 0 @component-padding;
 
   &.is-focused {
-    .bgcolor(@button-color, @value-background-color);
+    .bgcolor(@text-color, @value-text-color);
     background-color: @bgcolor;
 
-    .color(@text-color, @value-text-color);
+    .color(@background-color, @value-background-color);
     color: @color;
   }
 
   &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
   &::shadow {
     .placeholder-text {
-      .color(@button-color, @value-border-color);
+      .color(@background-color, @value-background-color);
       color: @color;
     }
     .selection .region {
