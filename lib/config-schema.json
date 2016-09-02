@@ -1,54 +1,174 @@
 {
   "resetAllStyles": {
     "type": "object",
-    "title": "Reset to default",
+    "title": "Reset to default styles",
     "properties": {
       "reset": {
-        "title": "Background color",
+        "title": "Reset all styles",
         "type": "boolean",
         "default": false
       }
     }
   },
-  "base": {
+  "text": {
     "order": 1,
     "type": "object",
-    "title": "Base",
+    "title": "Text",
     "properties": {
-      "textColor": {
+      "color": {
+        "order": 1,
         "title": "Text color",
         "type": "color",
         "default": "rgba(51, 51, 51, 1)"
       },
-      "backgroundColor": {
-        "title": "Background color",
-        "type": "color",
-        "default": "rgba(204, 204, 204, 1)"
-      },
-      "borderColor": {
-        "title": "Border color",
-        "type": "color",
-        "default": "rgba(204, 204, 204, 1)"
+      "value": {
+        "order": 2,
+        "title": "Color value",
+        "type": "number",
+        "default": 0,
+        "minimum": -100,
+        "maximum": 100
       }
     }
   },
-  "comments": {
+  "heading": {
     "order": 2,
     "type": "object",
-    "title": "Comments - // /**/ <!-- --> # ---",
+    "title": "Text",
     "properties": {
-      "textColor": {
+      "color": {
         "order": 1,
-        "title": "Set text color",
+        "title": "Text color",
         "type": "color",
-        "default": "rgba(153, 153, 153, 1)"
+        "default": "rgba(51, 51, 51, 1)"
       },
-      "fontStyle": {
+      "value": {
         "order": 2,
-        "title": "Font style",
-        "type": "string",
-        "enum": ["normal", "italic"],
-        "default": "normal"
+        "title": "Color value",
+        "type": "number",
+        "default": 0,
+        "minimum": -100,
+        "maximum": 100
+      }
+    }
+  },
+  "background": {
+    "order": 3,
+    "type": "object",
+    "title": "Text",
+    "properties": {
+      "color": {
+      "order": 1,
+      "title": "Text color",
+      "type": "color",
+      "default": "rgba(51, 51, 51, 1)"
+      },
+      "value": {
+        "order": 2,
+        "title": "Color value",
+        "type": "number",
+        "default": 0,
+        "minimum": -100,
+        "maximum": 100
+      }
+    }
+  },
+  "button": {
+    "order": 4,
+    "type": "object",
+    "title": "Text",
+    "properties": {
+      "color": {
+        "order": 1,
+        "title": "Text color",
+        "type": "color",
+        "default": "rgba(51, 51, 51, 1)"
+      },
+      "value": {
+        "order": 2,
+        "title": "Color value",
+        "type": "number",
+        "default": 0,
+        "minimum": -100,
+        "maximum": 100
+      }
+    }
+  },
+  "border": {
+    "order": 5,
+    "type": "object",
+    "title": "Border value",
+    "properties": {
+      "value": {
+        "title": "Border lightness/darkness",
+        "type": "number",
+        "default": 0,
+        "minimum": -100,
+        "maximum": 100
+      }
+    }
+  },
+  "nav": {
+    "order": 6,
+    "type": "object",
+    "title": "Border value",
+    "properties": {
+      "value": {
+        "title": "Tree-view and Tab-bar lightness/darkness",
+        "type": "number",
+        "default": 0,
+        "minimum": -100,
+        "maximum": 100
+      }
+    }
+  },
+  "findAndReplace": {
+    "order": 7,
+    "type": "object",
+    "title": "Text",
+    "properties": {
+      "borderHighLightColor": {
+        "order": 1,
+        "title": "Border highlight color",
+        "type": "color",
+        "default": "rgba(51, 51, 51, 1)"
+      },
+      "borderHighLightColorCurrent": {
+        "order": 2,
+        "title": "Border highlight color - current selected term",
+        "type": "color",
+        "default": "rgba(51, 51, 51, 1)"
+      }
+    }
+  },
+  "git": {
+    "order": 8,
+    "type": "object",
+    "title": "Text",
+    "properties": {
+      "infoColor": {
+        "order": 1,
+        "title": "Border highlight color",
+        "type": "color",
+        "default": "rgba(51, 51, 51, 1)"
+      },
+      "successColor": {
+        "order": 2,
+        "title": "New color",
+        "type": "color",
+        "default": "rgba(51, 51, 51, 1)"
+      },
+      "warningColor": {
+        "order": 3,
+        "title": "Modified color",
+        "type": "color",
+        "default": "rgba(51, 51, 51, 1)"
+      },
+      "errorColor": {
+        "order": 4,
+        "title": "Removed color",
+        "type": "color",
+        "default": "rgba(51, 51, 51, 1)"
       }
     }
   }
