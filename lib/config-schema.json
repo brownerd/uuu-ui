@@ -40,7 +40,7 @@
         "order": 1,
         "title": "Text color",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "rgba(245, 245, 245, 1)"
       },
       "value": {
         "order": 2,
@@ -61,7 +61,7 @@
       "order": 1,
       "title": "Text color",
       "type": "color",
-      "default": "rgba(51, 51, 51, 1)"
+      "default": "rgba(179, 179, 179, 1)"
       },
       "value": {
         "order": 2,
@@ -82,7 +82,7 @@
         "order": 1,
         "title": "Text color",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "rgba(0, 255, 102, 1)"
       },
       "value": {
         "order": 2,
@@ -102,7 +102,7 @@
       "value": {
         "title": "Border lightness/darkness",
         "type": "number",
-        "default": 0,
+        "default": -25,
         "minimum": -100,
         "maximum": 100
       }
@@ -116,7 +116,7 @@
       "value": {
         "title": "Tree-view and Tab-bar lightness/darkness",
         "type": "number",
-        "default": 0,
+        "default": -30,
         "minimum": -100,
         "maximum": 100
       }
@@ -131,13 +131,13 @@
         "order": 1,
         "title": "Border highlight color",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "rgba(255, 255, 255, 1)"
       },
       "borderHighLightColorCurrent": {
         "order": 2,
         "title": "Border highlight color - current selected term",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "rgba(0, 255, 102, 1)"
       }
     }
   },
@@ -150,25 +150,25 @@
         "order": 1,
         "title": "Border highlight color",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "rgba(0, 170, 255, 1)"
       },
       "successColor": {
         "order": 2,
         "title": "New color",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "rgba(0, 255, 102, 1)"
       },
       "warningColor": {
         "order": 3,
         "title": "Modified color",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "rgba(255, 213, 0, 1)"
       },
       "errorColor": {
         "order": 4,
         "title": "Removed color",
         "type": "color",
-        "default": "rgba(51, 51, 51, 1)"
+        "default": "hsla(0, 100%, 50%, 1)"
       }
     }
   }

@@ -1,3 +1,8 @@
+apm link --dev
+atom --dev .
+
+
+
 # Atom UI Theme Template
 
 This is a __starter template__ for creating an Atom UI theme.
