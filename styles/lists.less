@@ -30,7 +30,7 @@
     color: @color;
 
     &::before {
-      .color(@accent-color, @value-accent-color);
+      .color(@button-color, @value-accent-color);
       color: @color;
     }
   }
@@ -86,7 +86,7 @@
       }
 
       &.selected {
-        .bgcolor(@accent-color, @value-accent-color);
+        .bgcolor(@button-color, @value-accent-color);
         background-color: @bgcolor;
 
         .color(@text-color, @value-text-color);

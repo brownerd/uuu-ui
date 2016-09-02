@@ -3,7 +3,7 @@
 @heading-color
 @background-color
 @button-color
-@accent-color
+@button-color
 
 // Color
 .color(@text-color, @value-text-color);
@@ -15,7 +15,7 @@ color: @color;
 .color(@button-color, @value-button-color);
 color: @color;
 
-.color(@accent-color, @value-accent-color);
+.color(@button-color, @value-accent-color);
 color: @color;
 
 
@@ -29,7 +29,7 @@ background-color: @bgcolor;
 .bordercolor(@background-color, @value-border-color);
 border-color: @bordercolor;
 
-.bgcolor(@accent-color, @value-accent-color);
+.bgcolor(@button-color, @value-accent-color);
 background-color: @bgcolor;
 */
 
@@ -77,7 +77,7 @@ background-color: @bgcolor;
 
 
     &.active {
-      .bgcolor(@accent-color, @value-accent-color);
+      .bgcolor(@button-color, @value-accent-color);
       background-color: @bgcolor;
 
       .color(@text-color, @value-text-color);
