@@ -71,7 +71,7 @@
 @heading-color: @fog;
 @background-color: @aluminum;
 @button-color: @gold;
-@accent-color: @slime;
+@accent-color: @gold;
 
 @info-color: @blue;
 @success-color: @slime;
@@ -103,10 +103,12 @@
 
 
 // Text Colors
-// @text-color: @background-color;
-@text-color-subtle: @background-color;
-@text-color-highlight: @background-color;
-@text-color-selected: @background-color;
+// @text-color: @text-color;
+
+
+@text-color-subtle: @accent-color; //@background-color
+@text-color-highlight: @accent-color;     // used in - 0ms loading time
+@text-color-selected: cyan;
 
 @text-color-info: @info-color;
 @text-color-success: @success-color;

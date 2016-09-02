@@ -1,5 +1,15 @@
 .styleguide {
 
+  li,
+  label,
+  .is-color,
+  .is-font,
+  .is-radius,
+  .is-size {
+    .color(@text-color, @value-text-color);
+    color: @color;
+  }
+
   .styleguide-header {
 
     h1 {
@@ -33,6 +43,12 @@
       .color(@text-color, @value-text-color);
       color: @color;
     }
+  }
+
+  [data-name="icons"] .icon,
+  [data-name="icons"] .icon:before {
+    .color(@text-color, @value-text-color);
+    color: @color;
   }
 
 

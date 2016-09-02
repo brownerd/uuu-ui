@@ -2,13 +2,18 @@
 
   .breadcrumb {
 
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
+
+
+
     & > li a {
       .color(@button-color, @value-button-color);
       color: @color;
 
 
       &::after {
-        content:'>'
+        content:' ➜ '
       }
     }
 
@@ -63,6 +68,7 @@
     display: flex;
     justify-content: space-between;
     flex: none;
+
     min-width: 100%;
     max-width: 100%;
     -webkit-user-select: none;
@@ -97,8 +103,11 @@
         .color(@text-color, @value-text-color);
         color: @color;
 
-        width: 100%;
         display: block;
+        padding: 6px;
+        height: @tab-height;
+        width: 100%;
+
 
         &:hover {
           .bgcolor(@accent-color, @value-accent-color);
@@ -137,8 +146,9 @@
 
         font-size: inherit;
         height: 100%;
+
         line-height: 1;
-        padding: 10px 15px;
+        padding: 7px 15px;
         text-shadow: none;
         z-index: 0;
 
@@ -161,6 +171,12 @@
   .section.section.settings-panel {
     border-top: none;
     padding: 2rem 0 0 0;
+  }
+
+
+  .settings-panel label {
+    .color(@text-color, @value-text-color);
+    color: @color;
   }
 
 
@@ -195,6 +211,9 @@
   // Main container holding a list of all packages
   .section {
     // Padding for this whole container
+    .bordercolor(@background-color, @value-border-color);
+    border-top: 1px solid @bordercolor;
+
     &:first-child,
     &:last-child {
       border-top: none;
@@ -220,10 +239,22 @@
     .bgcolor(@background-color, @value-background-color);
     background-color: @bgcolor;
     &:hover {
+      .bordercolor(@background-color, @value-border-color);
+
+      .bgcolor(@background-color, @value-background-color);
       background-color: @bgcolor;
+      background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
     }
   }
 
+
+  .table {
+    .bgcolor(@background-color, @value-background-color);
+    background-color: @bgcolor;
+
+    .bordercolor(@background-color, @value-border-color);
+    border: 1px solid @bordercolor;
+  }
 
   .package-card {
     .bgcolor(@background-color, @value-background-color);
@@ -234,15 +265,19 @@
     //border-bottom: 1px solid @charcoal;
 
     &:hover {
+      .bordercolor(@background-color, @value-border-color);
+
+      .bgcolor(@background-color, @value-background-color);
       background-color: @bgcolor;
+      background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
     }
 
     // Package heading link
-    .card-name {
-      a {
-        color: @purple;
-      }
-    }
+    // .card-name {
+    //   a {
+    //     color: @purple;
+    //   }
+    // }
 
 
     &.disabled {
@@ -280,11 +315,33 @@
     }
   }
 
-
-
-
   input[type="checkbox"]:checked {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@button-color, @value-button-color);
     background-color: @bgcolor;
   }
+}
+
+
+.settings-view select.form-control {
+  .bgcolor(@button-color, @value-button-color);
+  background-color: @bgcolor;
+
+  .bordercolor(@background-color, @value-border-color);
+  border-color: @bordercolor;
+
+  .color(@text-color, @value-text-color);
+  color: @color;
+
+  &:hover {
+    .bgcolor(@button-color, @value-border-color);
+    background-color: @bgcolor;
+
+    .color(@button-color, @value-button-color);
+    color: @color;
+  }
+}
+
+button.icon.icon-gear.active-theme-settings {
+  .color(@text-color, @value-text-color);
+  color: @color;
 }

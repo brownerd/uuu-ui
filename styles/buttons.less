@@ -19,18 +19,34 @@
 
   &:hover,
   &:focus {
-    background-color: @color;
-    color: @bgcolor;
+    .bgcolor(@button-color, @value-border-color);
+    background-color: @bgcolor;
+
+    .color(@button-color, @value-button-color);
+    color: @color;
   }
+
   &:active {
-    background-color: @color;
-    border: 1px solid @text-color;
-    color: @bgcolor;
+    .bgcolor(@button-color, @value-border-color);
+    background-color: @bgcolor;
+
+    .color(@button-color, @value-button-color);
+    color: @color;
   }
+
   &.selected {
-    background-color: @color;
-    color: @bgcolor;
+    .bgcolor(@button-color, @value-nav);
+    background-color: @bgcolor;
+
+    .color(@button-color, @value-button-color);
+    color: @color;
+
+    &:hover {
+      .bgcolor(@button-color, @value-border-color);
+      background-color: @bgcolor;
+    }
   }
+
   &:focus,
   &:focus:active {
     outline: none;
@@ -40,8 +56,10 @@
 
 // Colored buttons -----------------------
 
-.btn.btn-primary { .btn-color(@background-color-info); }
-.btn.btn-info    { .btn-color(@background-color-info); }
+.bgcolor(@button-color, @value-button-color);
+
+.btn.btn-primary { .btn-color(@bgcolor); }
+.btn.btn-info    { .btn-color(@bgcolor); }
 .btn.btn-success { .btn-color(@background-color-success); }
 .btn.btn-warning { .btn-color(@background-color-warning); }
 .btn.btn-error   { .btn-color(@background-color-error); }

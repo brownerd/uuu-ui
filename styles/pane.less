@@ -3,18 +3,27 @@ atom-pane-container atom-pane .item-views .pane-item {
   .bgcolor(@background-color, @value-background-color);
   background-color: @bgcolor;
 
-  .bgcolor(@background-color, @value-background-color);
-  background-color: @bgcolor;
+  .bordercolor(@background-color, @value-border-color);
+
 
   display: flex;
   flex-direction: column;
 
+  background: @bgcolor;
+  background:
+  linear-gradient(115deg, transparent 75%, @bordercolor 75%) 0 0,
+  linear-gradient(245deg, transparent 75%, @bordercolor 75%) 0 0,
+  linear-gradient(115deg, transparent 75%, @bordercolor 75%) 7px -15px,
+  linear-gradient(245deg, transparent 75%, @bordercolor 75%) 7px -15px,
+  @bgcolor;
+  background-size: 15px 30px
 
-  //background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @graphite 7px, @graphite 8px);
 
-  background-image: radial-gradient(@seethru 15%, @trans 16%), radial-gradient(@seethru 15%, @trans 16%);
-  background-size: 10px 10px;
-  background-position: 0 0, 5px 5px;
+  //background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
+
+  // background-image: radial-gradient(@seethru 15%, @trans 16%), radial-gradient(@seethru 15%, @trans 16%);
+  // background-size: 10px 10px;
+  // background-position: 0 0, 5px 5px;
 }
 
 
