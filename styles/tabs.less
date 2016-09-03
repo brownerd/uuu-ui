@@ -1,40 +1,3 @@
-/*
-@text-color
-@heading-color
-@background-color
-@button-color
-@button-color
-
-// Color
-.color(@text-color, @value-text-color);
-color: @color;
-
-.color(@heading-color, @value-heading-color);
-color: @color;
-
-.color(@button-color, @value-button-color);
-color: @color;
-
-.color(@button-color, @value-accent-color);
-color: @color;
-
-
-// Background
-.bgcolor(@background-color, @value-background-color);
-background-color: @bgcolor;
-
-.bgcolor(@button-color, @value-button-color);
-background-color: @bgcolor;
-
-.bordercolor(@background-color, @value-border-color);
-border-color: @bordercolor;
-
-.bgcolor(@button-color, @value-accent-color);
-background-color: @bgcolor;
-*/
-
-
-
 // Tabs
 // -------------------
 
@@ -48,10 +11,10 @@ background-color: @bgcolor;
   border: none;
   //border-bottom: 1px solid darken(@tab-background-color, 10%);
 
-  &:hover {
-    .bgcolor(@background-color, @value-background-color);
-    background-color: lighten(@bgcolor, 5%);
-  }
+  // &:hover {
+  //   .bgcolor(@background-color, @value-background-color);
+  //   background-color: lighten(@bgcolor, 5%);
+  // }
 
   .tab {
     .bgcolor(@background-color, @value-background-color);

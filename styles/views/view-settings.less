@@ -246,6 +246,17 @@
     color: @color;
   }
 
+  .sub-section .sub-section-heading.has-items::after {
+    .color(@text-color, @value-text-color);
+    color: @color;
+  }
+
+
+  .sub-section .sub-section-heading.has-items:hover::after {
+    .color(@button-color, @value-button-color);
+    color: @color;
+  }
+
 
   .package-detail .package-card:hover {
 
@@ -285,12 +296,11 @@
       background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
     }
 
-    // Package heading link
-    // .card-name {
-    //   a {
-    //     color: @purple;
-    //   }
-    // }
+    //Package heading link
+    .package-name{
+      .color(@button-color, @value-button-color);
+      color: @color;
+    }
 
 
     &.disabled {
@@ -328,9 +338,14 @@
     }
   }
 
-  input[type="checkbox"]:checked {
-    .bgcolor(@button-color, @value-button-color);
-    background-color: @bgcolor;
+  input[type="checkbox"] {
+    .bordercolor(@background-color, @value-border-color);
+    background-color: @bordercolor;
+
+    &:checked {
+      .bgcolor(@button-color, @value-button-color);
+      background-color: @bgcolor;
+    }
   }
 }
 
@@ -357,4 +372,12 @@
 button.icon.icon-gear.active-theme-settings {
   .color(@text-color, @value-text-color);
   color: @color;
+}
+
+
+code {
+  .color(@text-color, @value-text-color);
+  .bgcolor(@background-color, @value-background-color);
+  color: @bgcolor;
+  background-color: @color;
 }

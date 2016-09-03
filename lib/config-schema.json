@@ -14,6 +14,7 @@
     "order": 1,
     "type": "object",
     "title": "Text",
+    "description": "This sets the base color for text throughout the UI",
     "properties": {
       "color": {
         "order": 1,
@@ -34,7 +35,8 @@
   "heading": {
     "order": 2,
     "type": "object",
-    "title": "Text",
+    "title": "Headings",
+    "description": "This styles all headings throughout the UI",
     "properties": {
       "color": {
         "order": 1,
@@ -55,7 +57,8 @@
   "background": {
     "order": 3,
     "type": "object",
-    "title": "Text",
+    "title": "Background",
+    "description": "This sets the base background color to use throughout the UI like, tree-view, tab-bar, panels, panes and views.",
     "properties": {
       "color": {
       "order": 1,
@@ -76,7 +79,8 @@
   "button": {
     "order": 4,
     "type": "object",
-    "title": "Text",
+    "title": "Button",
+    "description": "This is the color applied to most bottons and hover colors.",
     "properties": {
       "color": {
         "order": 1,
@@ -98,6 +102,7 @@
     "order": 5,
     "type": "object",
     "title": "Border value",
+    "description": "This darkens or lightens borders around elements. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
     "properties": {
       "value": {
         "title": "Border lightness/darkness",
@@ -111,7 +116,8 @@
   "nav": {
     "order": 6,
     "type": "object",
-    "title": "Border value",
+    "title": "Nav value",
+    "description": "This darkens or lightens the tree-view, tab-bar, find-and-replace panel and popup modal backgrounds. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
     "properties": {
       "value": {
         "title": "Tree-view and Tab-bar lightness/darkness",
@@ -125,7 +131,8 @@
   "findAndReplace": {
     "order": 7,
     "type": "object",
-    "title": "Text",
+    "title": "Find and replace border color",
+    "description": "This sets the border of the rectangle that appears around search terms. Just do a seach real quick to see what I'm talking about.",
     "properties": {
       "borderHighLightColor": {
         "order": 1,
@@ -144,29 +151,30 @@
   "git": {
     "order": 8,
     "type": "object",
-    "title": "Text",
+    "title": "Special colors",
+    "description": "This sets color used for git status and miscellaneous messaging.",
     "properties": {
       "infoColor": {
         "order": 1,
-        "title": "Border highlight color",
+        "title": "Info highlight color",
         "type": "color",
         "default": "rgba(0, 170, 255, 1)"
       },
       "successColor": {
         "order": 2,
-        "title": "New color",
+        "title": "New / Success color",
         "type": "color",
         "default": "rgba(0, 255, 102, 1)"
       },
       "warningColor": {
         "order": 3,
-        "title": "Modified color",
+        "title": "Modified / Warning color",
         "type": "color",
         "default": "rgba(255, 213, 0, 1)"
       },
       "errorColor": {
         "order": 4,
-        "title": "Removed color",
+        "title": "Removed / Error color",
         "type": "color",
         "default": "hsla(0, 100%, 50%, 1)"
       }
