@@ -10,8 +10,30 @@
       }
     }
   },
-  "text": {
+  "background": {
     "order": 1,
+    "type": "object",
+    "title": "Background",
+    "description": "This sets the base background color to use throughout the UI like, tree-view, tab-bar, panels, panes and views.",
+    "properties": {
+      "color": {
+      "order": 1,
+      "title": "Text color",
+      "type": "color",
+      "default": "rgba(179, 179, 179, 1)"
+      },
+      "value": {
+        "order": 2,
+        "title": "Color value",
+        "type": "number",
+        "default": 0,
+        "minimum": -100,
+        "maximum": 100
+      }
+    }
+  },
+  "text": {
+    "order": 2,
     "type": "object",
     "title": "Text",
     "description": "This sets the base color for text throughout the UI",
@@ -33,7 +55,7 @@
     }
   },
   "heading": {
-    "order": 2,
+    "order": 3,
     "type": "object",
     "title": "Headings",
     "description": "This styles all headings throughout the UI",
@@ -43,28 +65,6 @@
         "title": "Text color",
         "type": "color",
         "default": "rgba(245, 245, 245, 1)"
-      },
-      "value": {
-        "order": 2,
-        "title": "Color value",
-        "type": "number",
-        "default": 0,
-        "minimum": -100,
-        "maximum": 100
-      }
-    }
-  },
-  "background": {
-    "order": 3,
-    "type": "object",
-    "title": "Background",
-    "description": "This sets the base background color to use throughout the UI like, tree-view, tab-bar, panels, panes and views.",
-    "properties": {
-      "color": {
-      "order": 1,
-      "title": "Text color",
-      "type": "color",
-      "default": "rgba(179, 179, 179, 1)"
       },
       "value": {
         "order": 2,
@@ -177,6 +177,21 @@
         "title": "Removed / Error color",
         "type": "color",
         "default": "hsla(0, 100%, 50%, 1)"
+      }
+    }
+  },
+  "settingsBackground": {
+    "order": 9,
+    "type": "object",
+    "title": "Settings page background style",
+    "description": "This styles the background on all settings pages. Press command + , to see the settings page.",
+    "properties": {
+      "style": {
+        "order": 1,
+        "title": "Solid, dotted, pinstriped or triangle patternd backgound",
+        "type": "string",
+        "enum": ["solid", "dot", "pinstripe", "triangle"],
+        "default": "solid"
       }
     }
   }

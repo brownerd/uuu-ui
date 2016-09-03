@@ -8,7 +8,7 @@
 // Overrides: atom/status-bar
 
 .status-bar {
-  .bgcolor(@text-color, @value-background-color);
+  .bgcolor(@background-color, -30);
   background-color: @bgcolor;
 
   //border-top: 1px solid @base-border-color;
@@ -19,11 +19,11 @@
   font-size: @font-size;
 
   & a {
-    .color(@button-color, @value-accent-color);
+    .color(@button-color, @value-button-color);
     color: @color;
 
     &:hover {
-      .color(@button-color, @value-accent-color);
+      .color(@button-color, @value-button-color);
       color: @color;
       text-decoration: none;
     }

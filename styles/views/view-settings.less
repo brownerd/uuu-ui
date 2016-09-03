@@ -123,7 +123,7 @@
 
 
         &:hover {
-          .bgcolor(@button-color, @value-accent-color);
+          .bgcolor(@button-color, @value-button-color);
           background-color: @bgcolor;
 
           .color(@text-color, @value-text-color);
@@ -132,7 +132,7 @@
       }
 
       & > li.active > a {
-        .bgcolor(@button-color, @value-accent-color);
+        .bgcolor(@button-color, @value-button-color);
         background-color: @bgcolor;
 
         .color(@text-color, @value-text-color);
@@ -272,6 +272,24 @@
   }
 
 
+
+
+  .package-readme {
+    h1,
+    h2,
+    h3,
+    h4,
+    hr,
+    p,
+    li {
+      .color(@text-color, @value-text-color);
+      color: @color;
+    }
+  }
+
+
+
+
   .table {
     .bgcolor(@background-color, @value-background-color);
     background-color: @bgcolor;
@@ -381,3 +399,10 @@ code {
   color: @bgcolor;
   background-color: @color;
 }
+
+
+// 
+// .settings-view .package-readme hr {
+//   .color(@text-color, @value-text-color);
+//   color: @color;
+// }

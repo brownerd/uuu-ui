@@ -2,7 +2,10 @@
 //
 atom-pane-container atom-pane .item-views .pane-item {
   .bgcolor(@background-color, @value-background-color);
-  background-color: @bgcolor;
+
+  & when (@settings-bg-style = solid) {
+    background-color: @bgcolor;
+  }
 
   .bordercolor(@background-color, @value-border-color);
 
@@ -12,21 +15,27 @@ atom-pane-container atom-pane .item-views .pane-item {
 
   height: 100%;
 
+  & when (@settings-bg-style = triangle) {
+    background:
+    linear-gradient(115deg, transparent 75%, @bordercolor 75%) 0 0,
+    linear-gradient(245deg, transparent 75%, @bordercolor 75%) 0 0,
+    linear-gradient(115deg, transparent 75%, @bordercolor 75%) 7px -15px,
+    linear-gradient(245deg, transparent 75%, @bordercolor 75%) 7px -15px,
+    @bgcolor;
+    background-size: 15px 30px
+  }
 
-  // background:
-  // linear-gradient(115deg, transparent 75%, @bordercolor 75%) 0 0,
-  // linear-gradient(245deg, transparent 75%, @bordercolor 75%) 0 0,
-  // linear-gradient(115deg, transparent 75%, @bordercolor 75%) 7px -15px,
-  // linear-gradient(245deg, transparent 75%, @bordercolor 75%) 7px -15px,
-  // @bgcolor;
-  // background-size: 15px 30px
+  & when (@settings-bg-style = pinstripe) {
+    background-color: @bgcolor;
+    background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
+  }
 
-
-  //background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
-
-  background-image: radial-gradient(@seethru 15%, @trans 16%), radial-gradient(@seethru 15%, @trans 16%);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  & when (@settings-bg-style = dot) {
+    background-color: @bgcolor;
+    background-image: radial-gradient(@seethru 15%, @trans 16%), radial-gradient(@seethru 15%, @trans 16%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
 }
 
 
