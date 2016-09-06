@@ -1,3 +1,5 @@
+
+
 .settings-view {
 
   // Breadcrumb at the top
@@ -70,6 +72,8 @@
 
   // Settings menu on left hand side
   .config-menu {
+
+
     .bgcolor(@background-color, @value-background-color);
     background-color: @bgcolor;
 
@@ -78,25 +82,29 @@
     border-top: 1px solid @bordercolor;
     border-bottom: 1px solid @bordercolor;
 
-    display: flex;
-    justify-content: space-between;
-    flex: none;
+    & when (@settings-nav = horizontal) {
+      display: flex;
+      justify-content: space-between;
+      flex: none;
 
-    min-width: 100%;
-    max-width: 100%;
-    -webkit-user-select: none;
-    user-select: none;
-    padding-top: 0;
-    border-right: 0;
-    overflow-y: scroll;
+      min-width: 100%;
+      max-width: 100%;
+      -webkit-user-select: none;
+      user-select: none;
+      padding-top: 0;
+      border-right: 0;
+      overflow-y: scroll;
+    }
 
     .nav {
       .bgcolor(@background-color, @value-background-color);
       background-color: @bgcolor;
 
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+      & when (@settings-nav = horizontal) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
 
       &:hover {
         .bgcolor(@background-color, @value-background-color);
@@ -104,23 +112,33 @@
       }
 
       & > li {
-        text-align: center;
-        width: 100%;
+        & when (@settings-nav = horizontal) {
+          text-align: center;
+          width: 100%;
+        }
       }
 
       & > li > a {
-        .bordercolor(@background-color, @value-border-color);
-        border-color: @bordercolor;
-        border-right: 1px solid @bordercolor;
 
         .color(@text-color, @value-text-color);
         color: @color;
 
         display: block;
-        padding: 6px;
-        height: @tab-height;
-        width: 100%;
 
+        & when (@settings-nav = horizontal) {
+          .bordercolor(@background-color, @value-border-color);
+          border-color: @bordercolor;
+          border-right: 1px solid @bordercolor;
+
+          padding: 6px;
+          height: @tab-height;
+        }
+
+        & when (@settings-nav = vertical) {
+          padding: @component-padding * .75 @component-padding * 1;
+        }
+
+        width: 100%;
 
         &:hover {
           .bgcolor(@button-color, @value-button-color);
@@ -183,7 +201,7 @@
   // Ugh - the container
   .section.section.settings-panel {
     border-top: none;
-    padding: 2rem 0 0 0;
+    //padding: @component-padding * 3;
   }
 
 
@@ -198,19 +216,26 @@
     .bgcolor(@background-color, @value-background-color);
     background-color: @bgcolor;
 
-    .bordercolor(@background-color, @value-border-color);
-    border-color: @bordercolor;
-    border: 1px solid @bordercolor;
+    & when (@settings-border = true) {
+      .bordercolor(@background-color, @value-border-color);
+      border-color: @bordercolor;
+      border: 1px solid @bordercolor;
+    }
 
     // box-shadow: 0 10px 25px -16px #000;
-    margin: 0 auto;
-    max-width: 850px;
-    padding: 4rem;
+    padding: @component-padding * 3;
+
+    & when (@settings-nav = horizontal) {
+      margin: 0 auto;
+      max-width: 850px;
+    }
   }
 
   .select-container {
-    display: flex;
-    align-items: stretch;
+    & when (@settings-nav = horizontal) {
+      display: flex;
+      align-items: stretch;
+    }
 
     .btn {
       border-radius: 4px;
@@ -227,10 +252,12 @@
     .bordercolor(@background-color, @value-border-color);
     border-top: 1px solid @bordercolor;
 
+    padding: @component-padding * 3;
+
     &:first-child,
     &:last-child {
       border-top: none;
-      padding: 2rem;
+      padding: @component-padding * 3;
     }
 
 
@@ -392,16 +419,30 @@ button.icon.icon-gear.active-theme-settings {
   color: @color;
 }
 
+pre {
+  background-color: @trans;
+
+  .bordercolor(@text-color, @value-text-color);
+  border: 1px solid @bordercolor;
+
+  border-radius: 0;
+
+  .color(@text-color, @value-text-color);
+  color: @color;
+}
 
 code {
   .color(@text-color, @value-text-color);
   .bgcolor(@background-color, @value-background-color);
   color: @bgcolor;
   background-color: @color;
+
+  border-radius: 0;
 }
 
 
-// 
+
+//
 // .settings-view .package-readme hr {
 //   .color(@text-color, @value-text-color);
 //   color: @color;

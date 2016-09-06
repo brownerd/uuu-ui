@@ -56,15 +56,38 @@
   @bordercolor: lighten(@kolor, (@value / 2) * 1%);
 }
 
-// .color(@base-background-color)
-// color: @color;
-//
-// .bgcolor(@base-background-color)
-// background-color: @bgcolor;
-//
-// .bordercolor(@base-background-color)
-// border-color: @bordercolor;
+/*
+@text-color
+@heading-color
+@background-color
+@button-color
 
+// Color
+.color(@text-color, @value-text-color);
+color: @color;
+
+.color(@heading-color, @value-heading-color);
+color: @color;
+
+.color(@button-color, @value-button-color);
+color: @color;
+
+
+
+
+// Background
+.bgcolor(@background-color, @value-background-color);
+background-color: @bgcolor;
+
+.bgcolor(@button-color, @value-button-color);
+background-color: @bgcolor;
+
+.bordercolor(@background-color, @value-border-color);
+border-color: @bordercolor;
+
+.bgcolor(@background-color, @value-nav);
+ background-color: @bgcolor;
+*/
 
 
 @text-color: @charcoal;
@@ -87,8 +110,9 @@
 @value-button-color: 0;
 @value-nav: -30;
 
-@settings-bg-style: dot;
-
+@settings-bg-style: solid;
+@settings-nav: vertical;
+@settings-border: false;
 
 
 // UI Variables

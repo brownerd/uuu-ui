@@ -9,11 +9,12 @@ atom-pane-container atom-pane .item-views .pane-item {
 
   .bordercolor(@background-color, @value-border-color);
 
+  & when (@settings-nav = horizontal) {
+    display: flex;
+    flex-direction: column;
 
-  display: flex;
-  flex-direction: column;
-
-  height: 100%;
+    height: 100%;
+  }
 
   & when (@settings-bg-style = triangle) {
     background:

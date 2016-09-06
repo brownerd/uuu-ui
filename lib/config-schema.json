@@ -184,18 +184,31 @@
       }
     }
   },
-  "settingsBackground": {
+  "settingsPage": {
     "order": 9,
     "type": "object",
-    "title": "Settings page background style",
+    "title": "Settings page",
     "description": "This styles the background on all settings pages. Press command + , to see the settings page.",
     "properties": {
-      "style": {
+      "background": {
         "order": 1,
-        "title": "Solid, dotted, pinstriped or triangle patternd backgound",
+        "title": "Background style",
         "type": "string",
         "enum": ["solid", "dot", "pinstripe", "triangle"],
         "default": "solid"
+      },
+      "nav": {
+        "order": 2,
+        "title": "Navigation styles",
+        "type": "string",
+        "enum": ["vertical", "horizontal"],
+        "default": "vertical"
+      },
+      "border": {
+        "order": 3,
+        "title": "Borders for settings page containers",
+        "type": "boolean",
+        "default": false
       }
     }
   }
