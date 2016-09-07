@@ -120,7 +120,7 @@
   "nav": {
     "order": 6,
     "type": "object",
-    "title": "Nav value",
+    "title": "Nav and Tree-view value",
     "properties": {
       "value": {
         "title": "Tree-view and Tab-bar lightness/darkness",
