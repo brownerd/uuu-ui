@@ -7,6 +7,11 @@
         "title": "Reset all styles",
         "type": "boolean",
         "default": false
+      },
+      "zero": {
+        "title": "Reset EVERYTHING to grey",
+        "type": "boolean",
+        "default": false
       }
     }
   },
