@@ -63,26 +63,26 @@
 @button-color
 
 // Color
-.color(@text-color, @value-text-color);
+.color(@text-color, @text-value);
 color: @color;
 
-.color(@heading-color, @value-heading-color);
+.color(@heading-color, @heading-value);
 color: @color;
 
-.color(@button-color, @value-button-color);
+.color(@button-color, @button-value);
 color: @color;
 
 
 
 
 // Background
-.bgcolor(@background-color, @value-background-color);
+.bgcolor(@background-color, @background-value);
 background-color: @bgcolor;
 
-.bgcolor(@button-color, @value-button-color);
+.bgcolor(@button-color, @button-value);
 background-color: @bgcolor;
 
-.bordercolor(@background-color, @value-border-color);
+.bordercolor(@background-color, @border-value);
 border-color: @bordercolor;
 
 .bgcolor(@background-color, @value-nav);
@@ -95,24 +95,24 @@ border-color: @bordercolor;
 @background-color: @aluminum;
 @button-color: @slime;
 
-@find-and-replace-border-highlight-color: @white;
-@find-and-replace-current-border-highlight-color: @slime;
+@findAndReplace-borderHighLightColor: @white;
+@findAndReplace-borderHighLightColorCurrent: @slime;
 
-@info-color: @blue;
-@success-color: @slime;
-@warning-color: @gold;
-@error-color: @red;
+@git-infoColor: @blue;
+@git-successColor: @slime;
+@git-warningColor: @gold;
+@git-errorColor: @red;
 
-@value-text-color: 0;
-@value-heading-color: 0;
-@value-background-color: 0;
-@value-border-color: -25;
-@value-button-color: 0;
+@text-value: 0;
+@heading-value: 0;
+@background-value: 0;
+@border-value: -25;
+@button-value: 0;
 @value-nav: -30;
 
-@settings-bg-style: solid;
-@settings-nav: vertical;
-@settings-border: false;
+@settingsPage-background: solid;
+@settingsPage-nav: vertical;
+@settingsPage-border: false;
 
 
 // UI Variables
@@ -135,16 +135,16 @@ border-color: @bordercolor;
 @text-color-highlight: @button-color;     // used in - 0ms loading time
 @text-color-selected: @button-color;
 
-@text-color-info: @info-color;
-@text-color-success: @success-color;
-@text-color-warning: @warning-color;
-@text-color-error: @error-color;
+@text-color-info: @git-infoColor;
+@text-color-success: @git-successColor;
+@text-color-warning: @git-warningColor;
+@text-color-error: @git-errorColor;
 
 // Background colors
-@background-color-info: @info-color;
-@background-color-success: @success-color;
-@background-color-warning: @warning-color;
-@background-color-error: @error-color;
+@background-color-info: @git-infoColor;
+@background-color-success: @git-successColor;
+@background-color-warning: @git-warningColor;
+@background-color-error: @git-errorColor;
 
 @background-color-highlight: @background-color;
 @background-color-selected: @background-color;
@@ -188,11 +188,11 @@ border-color: @bordercolor;
 @tree-view-border-color: @base-border-color;
 
 // Site colors
-@ui-site-color-1: @info-color;
-@ui-site-color-2: @success-color;
+@ui-site-color-1: @git-infoColor;
+@ui-site-color-2: @git-successColor;
 @ui-site-color-3: @button-color;
-@ui-site-color-4: @error-color;
-@ui-site-color-5: @warning-color;
+@ui-site-color-4: @git-errorColor;
+@ui-site-color-5: @git-warningColor;
 
 // Sizes
 @font-size: 12px;

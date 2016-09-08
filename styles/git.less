@@ -4,12 +4,12 @@
 // Used to color git status
 
 .status {
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 }
 .status-added    { color: @text-color-success; }
 .status-ignored  {
-  .color(@background-color, @value-background-color);
+  .color(@background-color, @background-value);
   color: lighten(@background-color, 5%);
 }
 .status-modified { color: @text-color-warning; }

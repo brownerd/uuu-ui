@@ -6,59 +6,59 @@
   .is-font,
   .is-radius,
   .is-size {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
   .styleguide-header {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
     h1 {
-      .color(@heading-color, @value-heading-color);
+      .color(@heading-color, @heading-value);
       color: @color;
     }
 
     p:last-of-type {
-      .color(@text-color, @value-text-color);
+      .color(@text-color, @text-value);
       color: @color;
     }
   }
 
 
   .section-heading.section-heading {
-    .color(@heading-color, @value-heading-color);
+    .color(@heading-color, @heading-value);
     color: @color;
   }
 
 
   section {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
     h2 {
-      .color(@heading-color, @value-heading-color);
+      .color(@heading-color, @heading-value);
       color: @color;
     }
 
     p {
-      .color(@text-color, @value-text-color);
+      .color(@text-color, @text-value);
       color: @color;
     }
   }
 
   [data-name="icons"] .icon,
   [data-name="icons"] .icon:before {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
 
   .example .example-rendered {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     border-color: @bordercolor;
     //border: 0;
   }

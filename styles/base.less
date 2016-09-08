@@ -10,15 +10,15 @@
 body {
   font-size: @font-size;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
-  .bgcolor(@background-color, @value-background-color);
+  .bgcolor(@background-color, @background-value);
   background-color: @bgcolor;
 }
 
 atom-pane {
-  .bordercolor(@background-color, @value-border-color);
+  .bordercolor(@background-color, @border-value);
   border-color: @bordercolor;
 
   border-right: 1px solid @bordercolor;

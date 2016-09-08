@@ -14,7 +14,7 @@
     &.selected {
       background-color: @background-color-selected;
 
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
 
       &:before{ display: none; }
@@ -26,11 +26,11 @@
 // List Tree -------------------
 .list-tree {
   .selected {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
 
     &::before {
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
     }
   }
@@ -40,7 +40,7 @@
 // Select List -------------------
 // Like in the Command Palette
 .select-list {
-  .bgcolor(@background-color, @value-background-color);
+  .bgcolor(@background-color, @background-value);
   background-color: @bgcolor;
 
   li {
@@ -65,11 +65,11 @@
 
   border-radius: @component-border-radius;
 
-  .bgcolor(@background-color, @value-background-color);
+  .bgcolor(@background-color, @background-value);
   background-color: @bgcolor;
   box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
   padding: @popover-list-padding;
@@ -81,15 +81,15 @@
       padding-left: @popover-list-padding;
 
       &:hover {
-        .bgcolor(@background-color, @value-background-color);
+        .bgcolor(@background-color, @background-value);
         color: @bgcolor;
       }
 
       &.selected {
-        .bgcolor(@button-color, @value-button-color);
+        .bgcolor(@button-color, @button-value);
         background-color: @bgcolor;
 
-        .color(@text-color, @value-text-color);
+        .color(@text-color, @text-value);
         color: @color;
       }
     }

@@ -6,31 +6,31 @@
 
 .btn {
 
-  .bgcolor(@button-color, @value-button-color);
+  .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
 
-  .bordercolor(@button-color, @value-border-color);
+  .bordercolor(@button-color, @border-value);
   border-color: @bordercolor;
   border: 1px solid @bordercolor;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
 
   &:hover,
   &:focus {
-    .bgcolor(@button-color, @value-border-color);
+    .bgcolor(@button-color, @border-value);
     background-color: @bgcolor;
 
-    .color(@button-color, @value-button-color);
+    .color(@button-color, @button-value);
     color: @color;
   }
 
   &:active {
-    .bgcolor(@button-color, @value-border-color);
+    .bgcolor(@button-color, @border-value);
     background-color: @bgcolor;
 
-    .color(@button-color, @value-button-color);
+    .color(@button-color, @button-value);
     color: @color;
   }
 
@@ -38,11 +38,11 @@
     .bgcolor(@button-color, @value-nav);
     background-color: @bgcolor;
 
-    .color(@button-color, @value-button-color);
+    .color(@button-color, @button-value);
     color: @color;
 
     &:hover {
-      .bgcolor(@button-color, @value-border-color);
+      .bgcolor(@button-color, @border-value);
       background-color: @bgcolor;
     }
   }
@@ -56,7 +56,7 @@
 
 // Colored buttons -----------------------
 
-.bgcolor(@button-color, @value-button-color);
+.bgcolor(@button-color, @button-value);
 
 .btn.btn-primary { .btn-color(@bgcolor); }
 .btn.btn-info    { .btn-color(@bgcolor); }
@@ -66,7 +66,7 @@
 
 .btn-color(@bg) {
   background-color: @bg;
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
   &:hover,
@@ -89,10 +89,10 @@
 // Button Group -----------------------
 
 .btn-group > .btn {
-  .bordercolor(@button-color, @value-border-color);
+  .bordercolor(@button-color, @border-value);
   border-color: @bordercolor;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
   border-left: 1px solid @bordercolor;

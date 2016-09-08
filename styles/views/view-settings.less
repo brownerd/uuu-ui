@@ -5,12 +5,12 @@
   // Breadcrumb at the top
   .breadcrumb {
 
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
 
     & > li a {
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
 
 
@@ -20,7 +20,7 @@
     }
 
     & > .active a {
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
     }
   }
@@ -31,28 +31,28 @@
 
 
   .text {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
   .link {
-    .color(@button-color, @value-button-color);
+    .color(@button-color, @button-value);
     color: @color;
   }
 
   .alert-info {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
 
     border: 0;
     border-color: none;
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
   }
 
 
   .setting-description {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
@@ -74,15 +74,15 @@
   .config-menu {
 
 
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     border-color: @bordercolor;
     border-top: 1px solid @bordercolor;
     border-bottom: 1px solid @bordercolor;
 
-    & when (@settings-nav = horizontal) {
+    & when (@settingsPage-nav = horizontal) {
       display: flex;
       justify-content: space-between;
       flex: none;
@@ -97,22 +97,22 @@
     }
 
     .nav {
-      .bgcolor(@background-color, @value-background-color);
+      .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
 
-      & when (@settings-nav = horizontal) {
+      & when (@settingsPage-nav = horizontal) {
         display: flex;
         justify-content: space-between;
         width: 100%;
       }
 
       &:hover {
-        .bgcolor(@background-color, @value-background-color);
+        .bgcolor(@background-color, @background-value);
         background-color: @bgcolor;
       }
 
       & > li {
-        & when (@settings-nav = horizontal) {
+        & when (@settingsPage-nav = horizontal) {
           text-align: center;
           width: 100%;
         }
@@ -120,13 +120,13 @@
 
       & > li > a {
 
-        .color(@text-color, @value-text-color);
+        .color(@text-color, @text-value);
         color: @color;
 
         display: block;
 
-        & when (@settings-nav = horizontal) {
-          .bordercolor(@background-color, @value-border-color);
+        & when (@settingsPage-nav = horizontal) {
+          .bordercolor(@background-color, @border-value);
           border-color: @bordercolor;
           border-right: 1px solid @bordercolor;
 
@@ -134,45 +134,45 @@
           height: @tab-height;
         }
 
-        & when (@settings-nav = vertical) {
+        & when (@settingsPage-nav = vertical) {
           padding: @component-padding * .75 @component-padding * 1;
         }
 
         width: 100%;
 
         &:hover {
-          .bgcolor(@button-color, @value-button-color);
+          .bgcolor(@button-color, @button-value);
           background-color: @bgcolor;
 
-          .color(@text-color, @value-text-color);
+          .color(@text-color, @text-value);
           color: @color;
         }
       }
 
       & > li.active > a {
-        .bgcolor(@button-color, @value-button-color);
+        .bgcolor(@button-color, @button-value);
         background-color: @bgcolor;
 
-        .color(@text-color, @value-text-color);
+        .color(@text-color, @text-value);
         color: @color;
       }
     }
 
     .button-area {
-      .bgcolor(@background-color, @value-background-color);
+      .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
 
       margin: 0;
       padding: 0;
 
       .btn {
-        .bgcolor(@background-color, @value-background-color);
+        .bgcolor(@background-color, @background-value);
         background-color: @bgcolor;
 
         border-radius: 0;
         border: 0;
 
-        .color(@text-color, @value-text-color);
+        .color(@text-color, @text-value);
         color: @color;
 
         font-size: inherit;
@@ -184,7 +184,7 @@
         z-index: 0;
 
         &:hover {
-          .bgcolor(@button-color, @value-button-color);
+          .bgcolor(@button-color, @button-value);
           background-color: @bgcolor;
         }
       }
@@ -206,18 +206,18 @@
 
 
   .settings-panel label {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
 
   // each sheet
   .section-container {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
-    & when (@settings-border = true) {
-      .bordercolor(@background-color, @value-border-color);
+    & when (@settingsPage-border = true) {
+      .bordercolor(@background-color, @border-value);
       border-color: @bordercolor;
       border: 1px solid @bordercolor;
     }
@@ -225,14 +225,14 @@
     // box-shadow: 0 10px 25px -16px #000;
     padding: @component-padding * 3;
 
-    & when (@settings-nav = horizontal) {
+    & when (@settingsPage-nav = horizontal) {
       margin: 0 auto;
       max-width: 850px;
     }
   }
 
   .select-container {
-    & when (@settings-nav = horizontal) {
+    & when (@settingsPage-nav = horizontal) {
       display: flex;
       align-items: stretch;
     }
@@ -249,7 +249,7 @@
   // Main container holding a list of all packages
   .section {
     // Padding for this whole container
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     border-top: 1px solid @bordercolor;
 
     padding: @component-padding * 3;
@@ -262,37 +262,37 @@
 
 
     .section-heading {
-      .color(@heading-color, @value-heading-color);
+      .color(@heading-color, @heading-value);
       color: @color;
     }
   }
 
 
   .sub-section .sub-section-heading {
-    .color(@heading-color, @value-heading-color);
+    .color(@heading-color, @heading-value);
     color: @color;
   }
 
   .sub-section .sub-section-heading.has-items::after {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
 
   .sub-section .sub-section-heading.has-items:hover::after {
-    .color(@button-color, @value-button-color);
+    .color(@button-color, @button-value);
     color: @color;
   }
 
 
   .package-detail .package-card:hover {
 
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
     &:hover {
-      .bordercolor(@background-color, @value-border-color);
+      .bordercolor(@background-color, @border-value);
 
-      .bgcolor(@background-color, @value-background-color);
+      .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
       background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
     }
@@ -309,12 +309,12 @@
     hr,
     p,
     li {
-      .color(@text-color, @value-text-color);
+      .color(@text-color, @text-value);
       color: @color;
     }
 
     a {
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
     }
   }
@@ -323,15 +323,15 @@
 
 
   .table {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     border: 1px solid @bordercolor;
   }
 
   .package-card {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
     border: 0;
@@ -339,44 +339,44 @@
     //border-bottom: 1px solid @charcoal;
 
     &:hover {
-      .bordercolor(@background-color, @value-border-color);
+      .bordercolor(@background-color, @border-value);
 
-      .bgcolor(@background-color, @value-background-color);
+      .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
       background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
     }
 
     //Package heading link
     .package-name{
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
     }
 
 
     &.disabled {
-      .bordercolor(@background-color, @value-border-color);
+      .bordercolor(@background-color, @border-value);
 
-      .bgcolor(@background-color, @value-background-color);
+      .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
       background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
     }
 
     // Package stats
     .stats .stats-item .icon {
-      .color(@text-color, @value-text-color);
+      .color(@text-color, @text-value);
       color: @color;
     }
 
     // Package description color
     .package-description,
     .value {
-      .color(@text-color, @value-text-color);
+      .color(@text-color, @text-value);
       color: @color;
     }
 
     // Author link color
     .meta-user .author {
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
     }
 
@@ -389,11 +389,11 @@
   }
 
   input[type="checkbox"] {
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     background-color: @bordercolor;
 
     &:checked {
-      .bgcolor(@button-color, @value-button-color);
+      .bgcolor(@button-color, @button-value);
       background-color: @bgcolor;
     }
   }
@@ -401,44 +401,44 @@
 
 
 .settings-view select.form-control {
-  .bgcolor(@button-color, @value-button-color);
+  .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
 
-  .bordercolor(@background-color, @value-border-color);
+  .bordercolor(@background-color, @border-value);
   border-color: @bordercolor;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
   &:hover {
-    .bgcolor(@button-color, @value-border-color);
+    .bgcolor(@button-color, @border-value);
     background-color: @bgcolor;
 
-    .color(@button-color, @value-button-color);
+    .color(@button-color, @button-value);
     color: @color;
   }
 }
 
 button.icon.icon-gear.active-theme-settings {
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 }
 
 pre {
   background-color: @trans;
 
-  .bordercolor(@text-color, @value-text-color);
+  .bordercolor(@text-color, @text-value);
   border: 1px solid @bordercolor;
 
   border-radius: 0;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 }
 
 code {
-  .color(@text-color, @value-text-color);
-  .bgcolor(@background-color, @value-background-color);
+  .color(@text-color, @text-value);
+  .bgcolor(@background-color, @background-value);
   color: @bgcolor;
   background-color: @color;
 
@@ -449,6 +449,6 @@ code {
 
 //
 // .settings-view .package-readme hr {
-//   .color(@text-color, @value-text-color);
+//   .color(@text-color, @text-value);
 //   color: @color;
 // }

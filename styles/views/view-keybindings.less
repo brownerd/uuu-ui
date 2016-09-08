@@ -1,20 +1,20 @@
 .settings-view {
 
   .section .section-heading {
-    .color(@heading-color, @value-heading-color);
+    .color(@heading-color, @heading-value);
     color: @color;
   }
 
 
   .keybinding-panel.section {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
     margin: 2rem;
   }
 
 
   .table th {
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     border-color: @bordercolor;
   }
 
@@ -22,23 +22,23 @@
   tr {
 
     &:nth-child(even) {
-      .bgcolor(@background-color, @value-background-color);
+      .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
     }
 
     &:hover {
-      .bgcolor(@button-color, @value-button-color);
+      .bgcolor(@button-color, @button-value);
       background-color: @bgcolor;
     }
   }
 
 
   .table td {
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     border-color: @bordercolor;
     //border: 0;
 
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
 
     vertical-align: middle;

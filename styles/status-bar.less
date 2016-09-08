@@ -13,17 +13,17 @@
 
   //border-top: 1px solid @base-border-color;
 
-  .color(@background-color, @value-text-color);
+  .color(@background-color, @text-value);
   color: @color;
 
   font-size: @font-size;
 
   & a {
-    .color(@button-color, @value-button-color);
+    .color(@button-color, @button-value);
     color: @color;
 
     &:hover {
-      .color(@button-color, @value-button-color);
+      .color(@button-color, @button-value);
       color: @color;
       text-decoration: none;
     }
@@ -41,6 +41,6 @@
 }
 
 .terminal-plus.status-bar .icon.icon-plus {
-  .color(@button-color, @value-button-color);
+  .color(@button-color, @button-value);
   color: @color;
 }

@@ -4,24 +4,24 @@
 // Overrides: atom/static/panels.less
 
 .panel-heading {
-  .bordercolor(@background-color, @value-border-color);
+  .bordercolor(@background-color, @border-value);
   border-color: @bordercolor;
   border-bottom: 1px solid @bordercolor;
 
 
-  .bgcolor(@background-color, @value-background-color);
+  .bgcolor(@background-color, @background-value);
   background-color: @bgcolor;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 }
 
 .inset-panel {
-  .bgcolor(@background-color, @value-background-color);
+  .bgcolor(@background-color, @background-value);
   background-color: @bgcolor;
 
   .panel-heading {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: lighten(@bgcolor, 4%);
   }
 }
@@ -37,14 +37,14 @@ atom-panel.modal {
   background-color: @bgcolor;
 
 
-  .bordercolor(@background-color, @value-border-color);
+  .bordercolor(@background-color, @border-value);
   border-color: @bordercolor;
   border: 1px solid @bordercolor;
   border-top: none;
   //box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
   box-shadow: none;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
   padding: @tab-height / 2;
@@ -53,9 +53,9 @@ atom-panel.modal {
   // &:after {
   //   content: '';
   //
-  //   .bordercolor(@background-color, @value-border-color);
+  //   .bordercolor(@background-color, @border-value);
   //
-  //   .bgcolor(@background-color, @value-background-color);
+  //   .bgcolor(@background-color, @background-value);
   //   background-color: alpha(@bgcolor, 50%);
   //   background-image: repeating-linear-gradient(-45deg, @trans, @trans 17px, @bordercolor 17px, @bordercolor 18px);
   //
@@ -73,7 +73,7 @@ atom-panel.modal {
   background-color: @bgcolor;
 
   ol.list-group li {
-    .bordercolor(@background-color, @value-background-color);
+    .bordercolor(@background-color, @background-value);
     border-bottom: 1px solid @bordercolor;
   }
 }
@@ -82,7 +82,7 @@ atom-panel.modal {
   .bgcolor(@background-color, @value-nav);
   background-color: @bgcolor;
 
-  .color(@button-color, @value-button-color);
+  .color(@button-color, @button-value);
   color: @color;
 }
 

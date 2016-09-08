@@ -12,11 +12,11 @@
   .bgcolor(@background-color, @value-nav);
   background-color: @bgcolor;
 
-  .bordercolor(@background-color, @value-border-color);
+  .bordercolor(@background-color, @border-value);
   border-color: @bordercolor;
   border-top: 1px solid @bordercolor;
 
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 
 }
@@ -24,34 +24,34 @@
 .project-find .options-label .options,
 .find-and-replace .options-label,
 .project-find .options-label {
-  .color(@text-color, @value-text-color);
+  .color(@text-color, @text-value);
   color: @color;
 }
 
 .tool-panel {
   .header-item.description {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
   .project-find .description .subtle-info-message {
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
   .highlight {
-    .bgcolor(@button-color, @value-button-color);
+    .bgcolor(@button-color, @button-value);
     background-color: @bgcolor;
 
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
   .highlight-info {
-    .bgcolor(@button-color, @value-button-color);
+    .bgcolor(@button-color, @button-value);
     background-color: @bgcolor;
 
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
   }
 
@@ -61,13 +61,13 @@
 // https://discuss.atom.io/t/how-to-change-find-and-replace-highlight-color/14750
 
 atom-text-editor::shadow .highlight.find-result .region {
-  .bordercolor(@find-and-replace-border-highlight-color, @value-heading-color);
+  .bordercolor(@findAndReplace-borderHighLightColor, @heading-value);
   border-color: @bordercolor;
   //border-width: 2px;
 }
 atom-text-editor::shadow .highlight.current-result .region,
 atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
-  .bordercolor(@find-and-replace-current-border-highlight-color, @value-button-color);
+  .bordercolor(@findAndReplace-borderHighLightColorCurrent, @button-value);
   border-color: @bordercolor;
   border-width: 2px;
 }

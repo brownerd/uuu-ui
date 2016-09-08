@@ -12,20 +12,20 @@
   //border-bottom: 1px solid darken(@tab-background-color, 10%);
 
   // &:hover {
-  //   .bgcolor(@background-color, @value-background-color);
+  //   .bgcolor(@background-color, @background-value);
   //   background-color: lighten(@bgcolor, 5%);
   // }
 
   .tab {
-    .bgcolor(@background-color, @value-background-color);
+    .bgcolor(@background-color, @background-value);
     background-color: @trans;
 
-    .bordercolor(@background-color, @value-border-color);
+    .bordercolor(@background-color, @border-value);
     border-color: @bordercolor;
 
     border-right: 1px solid bordercolor;
 
-    .color(@text-color, @value-text-color);
+    .color(@text-color, @text-value);
     color: @color;
 
     font-size: @font-size;
@@ -34,20 +34,20 @@
 
 
     &:hover {
-      .bgcolor(@background-color, @value-background-color);
+      .bgcolor(@background-color, @background-value);
       background-color: darken(@bgcolor, 5%);
     }
 
 
     &.active {
-      .bgcolor(@button-color, @value-button-color);
+      .bgcolor(@button-color, @button-value);
       background-color: @bgcolor;
 
-      .color(@text-color, @value-text-color);
+      .color(@text-color, @text-value);
       color: @color;
 
       // &:hover {
-      //   .bgcolor(@background-color, @value-background-color);
+      //   .bgcolor(@background-color, @background-value);
       //   background-color: darken(@bgcolor, 5%);
       // }
     }
