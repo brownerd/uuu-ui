@@ -317,6 +317,14 @@
       .color(@button-color, @button-value);
       color: @color;
     }
+
+    kbd {
+      .bgcolor(@button-color, @button-value);
+      background-color: @bgcolor;
+
+      .color(@text-color, @text-value);
+      color: @color;
+    }
   }
 
 
@@ -395,6 +403,64 @@
     &:checked {
       .bgcolor(@button-color, @button-value);
       background-color: @bgcolor;
+    }
+  }
+
+
+  .sub-section-body {
+    //.bordercolor(@background-color, 5);
+    // background-color: @bordercolor;
+
+    .bordercolor(@background-color, @border-value);
+
+    .bgcolor(@background-color, @background-value);
+    background-color: @bgcolor;
+    background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
+
+    padding: @component-padding * 2;
+
+    border-radius: @border-radius;
+
+    .control-group + .control-group {
+      .bordercolor(@background-color, @border-value);
+      border-top: 1px solid @bordercolor;
+
+      margin-top: @component-padding * 2;
+      padding-top: @component-padding * 2;
+    }
+
+    .color {
+      padding-left: 0;
+
+      label {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+
+    input[type="color"] {
+      float: none;
+      margin: 0;
+      padding: 0;
+      width: 50%;
+      height: 30px;
+      border-radius: 0;
+
+      .bordercolor(@background-color, @border-value);
+      border: 1px solid @bordercolor;
+
+      //background: #adadad;
+    }
+
+    .editor-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      .editor {
+        width: 50%;
+      }
     }
   }
 }
