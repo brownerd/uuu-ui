@@ -86,19 +86,27 @@
     "properties": {
       "color": {
         "order": 1,
-        "title": "Text color",
-        "description": "This is the color applied to most bottons and hover colors.",
+        "title": "Backgound and link text color",
+        "description": "This is the color applied to bottons and text links.",
         "type": "color",
         "default": "rgba(0, 255, 102, 1)"
       },
       "value": {
         "order": 2,
-        "title": "Color value",
+        "title": "Backgound and link text color value",
         "type": "number",
         "description": "This darkens or lightens the button color. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "default": 0,
         "minimum": -100,
         "maximum": 100
+      },
+      "textcolor": {
+        "order": 3,
+        "title": "Button text color",
+        "description": "Set the button text color to either the main text color or the main background color.",
+        "type": "string",
+        "enum": ["text", "background"],
+        "default": "text"
       }
     }
   },
@@ -114,6 +122,15 @@
         "default": -25,
         "minimum": -100,
         "maximum": 100
+      },
+      "radius": {
+        "order": 2,
+        "title": "Border radius",
+        "description": "Set border radius on buttons, inputs and containers. 0-20",
+        "type": "number",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 20
       }
     }
   },
@@ -195,14 +212,14 @@
         "title": "Background style",
         "type": "string",
         "enum": ["solid", "dot", "pinstripe", "triangle"],
-        "default": "solid"
+        "default": "triangle"
       },
       "nav": {
         "order": 2,
         "title": "Navigation styles",
         "type": "string",
         "enum": ["vertical", "horizontal"],
-        "default": "vertical"
+        "default": "horizontal"
       },
       "border": {
         "order": 3,

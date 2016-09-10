@@ -5,7 +5,7 @@
 // Overrides: atom/tabs
 
 .tab-bar {
-  .bgcolor(@background-color, @value-nav);
+  .bgcolor(@background-color, @nav-value);
   background-color: @bgcolor;
 
   border: none;
@@ -15,6 +15,7 @@
   //   .bgcolor(@background-color, @background-value);
   //   background-color: lighten(@bgcolor, 5%);
   // }
+
 
   .tab {
     .bgcolor(@background-color, @background-value);
@@ -36,6 +37,11 @@
     &:hover {
       .bgcolor(@background-color, @background-value);
       background-color: darken(@bgcolor, 5%);
+
+      .close-icon {
+        // transform: scale(1) rotate(90deg);
+        // transition: .3s ease-in-out;
+      }
     }
 
 
@@ -43,8 +49,15 @@
       .bgcolor(@button-color, @button-value);
       background-color: @bgcolor;
 
-      .color(@text-color, @text-value);
-      color: @color;
+      & when (@button-textcolor = background) {
+        .color(@background-color, @nav-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = text) {
+        .color(@text-color, @text-value);
+        color: @color;
+      }
 
       // &:hover {
       //   .bgcolor(@background-color, @background-value);
@@ -55,20 +68,30 @@
 
     // Modified Icon (the blue circle) -------------------
     &.modified:not(:hover) .close-icon {
+      .bgcolor(@button-color, @button-value);
+
       top: 50%;
       right: @component-padding + 4px; // 4px -> half of icon size
       margin-top: -3px;
-      border-color: @text-color-info;
+      border-color: spin(@bgcolor, 180);
     }
     &.modified:hover .close-icon {
       color: currentColor;
     }
 
 
+
+
     // Close Icon (the X) -------------------
-    .close-icon:hover {
-      color: @text-color-selected;
+    .close-icon {
+      // transform: scale(0) rotate(0);
+      // transform-origin: center center
+
+      &:hover {
+        color: @text-color-selected;
+      }
     }
+
     &.active .close-icon:hover {
       color: @text-color;
     }
@@ -77,7 +100,8 @@
     // Dragging -------------------
     // Styles get applied while dragging a tab
     &.is-dragging {
-      background: darken(@tab-background-color, 10%);
+      .bgcolor(@button-color, @button-value);
+      background-color: @bgcolor;
       border-color: transparent;
       opacity: .5;
       & .close-icon {
@@ -85,4 +109,9 @@
       }
     }
   }
+}
+
+
+.inset-panel {
+  border-radius: 0;
 }

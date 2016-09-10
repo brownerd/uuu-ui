@@ -8,7 +8,7 @@
 // Overrides: atom/status-bar
 
 .status-bar {
-  .bgcolor(@background-color, -30);
+  .bgcolor(@background-color, @nav-value - 5);
   background-color: @bgcolor;
 
   //border-top: 1px solid @base-border-color;
@@ -28,6 +28,13 @@
       text-decoration: none;
     }
   }
+
+  atom-text-editor::shadow .linter-highlight.status-success,
+  .linter-highlight.status-success,
+  linter-bottom-tab.active {
+    .color(@button-color, @button-value);
+    color: @color;
+  }
 }
 
 
@@ -36,7 +43,7 @@
 // This is styling the Terminal Plus status-bar
 .bottom.tool-panel.panel-bottom,
 .bottom.tool-panel.panel-bottom .status-bar {
-  .bgcolor(@background-color, @value-nav);
+  .bgcolor(@background-color, @nav-value);
   background-color: @bgcolor;
 }
 

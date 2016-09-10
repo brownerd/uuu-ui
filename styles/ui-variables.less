@@ -85,10 +85,9 @@ background-color: @bgcolor;
 .bordercolor(@background-color, @border-value);
 border-color: @bordercolor;
 
-.bgcolor(@background-color, @value-nav);
+.bgcolor(@background-color, @nav-value);
  background-color: @bgcolor;
 */
-
 
 @text-color: @charcoal;
 @heading-color: @fog;
@@ -108,12 +107,14 @@ border-color: @bordercolor;
 @background-value: 0;
 @border-value: -25;
 @button-value: 0;
-@value-nav: -30;
+@button-textvalue: 0;
+@nav-value: -30;
 
-@settingsPage-background: solid;
-@settingsPage-nav: vertical;
+@settingsPage-background: triangle;
+@settingsPage-nav: horizontal;
 @settingsPage-border: false;
-@border-radius: 2px;
+@border-radius: 2;
+@button-textcolor: text;
 
 
 // UI Variables
@@ -209,5 +210,5 @@ border-color: @bordercolor;
 @tab-height: 30px;
 
 // Misc
-@component-border-radius: @border-radius;
+@component-border-radius: @border-radius * 1px;
 @font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

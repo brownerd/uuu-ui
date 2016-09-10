@@ -5,6 +5,7 @@
 
 
 .btn {
+  border-radius: @border-radius * 1px;
 
   .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
@@ -14,13 +15,19 @@
   //border: 1px solid @bordercolor;
   border: none;
 
-  .color(@text-color, @text-value);
-  color: @color;
+  & when (@button-textcolor = background) {
+    .color(@background-color, @background-value);
+    color: @color;
+  }
 
+  & when (@button-textcolor = text) {
+    .color(@text-color, @text-value);
+    color: @color;
+  }
 
   &:hover,
   &:focus {
-    .bgcolor(@button-color, @border-value);
+    .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
     .color(@button-color, @button-value);
@@ -31,20 +38,40 @@
     .bgcolor(@button-color, @border-value);
     background-color: @bgcolor;
 
-    .color(@button-color, @button-value);
+    .color(@background-color, @background-value);
     color: @color;
   }
 
   &.selected {
-    .bgcolor(@button-color, @value-nav);
+    .bgcolor(@button-color, @nav-value);
     background-color: @bgcolor;
 
-    .color(@button-color, @button-value);
-    color: @color;
+    & when (@button-textcolor = background) {
+      .color(@background-color, @background-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
 
     &:hover {
-      .bgcolor(@button-color, @border-value);
-      background-color: @bgcolor;
+      & when (@button-textcolor = background) {
+        .bgcolor(@background-color, @nav-value);
+        background-color: @bgcolor;
+
+        .color(@button-color, @button-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = text) {
+        .bgcolor(@text-color, @text-value);
+        background-color: @bgcolor;
+
+        .color(@button-color, @button-value);
+        color: @color;
+      }
     }
   }
 
@@ -90,16 +117,24 @@
 // Button Group -----------------------
 
 .btn-group > .btn {
-  .bordercolor(@button-color, @border-value);
+  border-radius: @border-radius * 1px;
+
+  .bordercolor(@button-color, @button-value);
   border-color: @bordercolor;
 
-  .color(@text-color, @text-value);
-  color: @color;
+  & when (@button-textcolor = background) {
+    .color(@background-color, @background-value);
+    color: @color;
+  }
 
-  border-left: 1px solid @bordercolor;
-  border-right: 1px solid @bordercolor;
+  & when (@button-textcolor = text) {
+    .color(@text-color, @text-value);
+    color: @color;
+  }
 
-  color: @color;
+  border: 1px solid @bordercolor;
+
+  //color: @color;
 
   &:first-child {
     border-left: 1px solid @bordercolor;
@@ -108,18 +143,73 @@
   &:last-child {
     border-right: 1px solid @bordercolor;
   }
+
+  &:hover {
+    & when (@button-textcolor = background) {
+      .bgcolor(@background-color, @background-value);
+      background-color: @bgcolor;
+
+      .color(@button-color, @button-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .bgcolor(@text-color, @text-value);
+      background-color: @bgcolor;
+
+      .color(@button-color, @button-value);
+      color: @color;
+    }
+  }
 }
 
+.find-and-replace {
+  .btn-group > .btn {
+    border-radius: @border-radius * 1px;
 
-//
-// .btn-wrap-group .btn {
-//   //color: @button-text-color;
-// }
-//
-//
-//
-// a.icon,
-// button.icon {
-//   // border: 1px solid @button-border-color;
-//   //color: @button-text-color;
-// }
+    .bordercolor(@button-color, @button-value);
+    border-color: @bordercolor;
+
+    & when (@button-textcolor = background) {
+      .color(@background-color, @nav-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
+
+    border: 1px solid @bordercolor;
+
+
+    //color: @color;
+
+    &:first-child {
+      border-left: 1px solid @bordercolor;
+    }
+
+    &:last-child {
+      border-right: 1px solid @bordercolor;
+    }
+
+    &:hover {
+
+      & when (@button-textcolor = background) {
+        .bgcolor(@background-color, @nav-value);
+        background-color: @bgcolor;
+
+        .color(@button-color, @button-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = text) {
+        .bgcolor(@text-color, @text-value);
+        background-color: @bgcolor;
+
+        .color(@button-color, @button-value);
+        color: @color;
+      }
+    }
+  }
+}
