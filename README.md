@@ -1,13 +1,13 @@
 # UUU UI theme
 
-This is a UI for UUU.
+This is a UI for UUU!
 
 UUU can easily change the colors of this ui so, make it  UUUr way.
 
 
 
 ## PowerTips
-- 
+-
 
 
 ## Gotchas

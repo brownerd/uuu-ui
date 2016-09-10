@@ -1,0 +1,25 @@
+.terminal-plus .xterm {
+
+  .bgcolor(@background-color, @nav-value);
+  background-color: @bgcolor;
+
+  .color(@heading-color, @heading-value);
+  color: @color;
+
+  ::selection {
+    .bgcolor(@text-color, @text-value);
+    background-color: @bgcolor;
+  }
+
+  .terminal-cursor {
+    .bgcolor(@button-color, @button-value);
+    background-color: @bgcolor;
+  }
+
+  // .bordercolor(@background-color, @border-value);
+  // background-image: repeating-linear-gradient(-45deg, @trans, @trans 7px, @bordercolor 7px, @bordercolor 8px);
+  //
+  // & > .terminal {
+  //   background: @trans !important;
+  // }
+}
