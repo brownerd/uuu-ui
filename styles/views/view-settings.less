@@ -8,11 +8,9 @@
     .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
 
-
     & > li a {
       .color(@button-color, @button-value);
       color: @color;
-
 
       &::after {
         content:' ➜ '
@@ -26,10 +24,7 @@
   }
 
 
-
-
-
-
+  // Overall text and link color on the settings pages
   .text {
     .color(@text-color, @text-value);
     color: @color;
@@ -50,29 +45,15 @@
     background-color: @bgcolor;
   }
 
-
   .setting-description {
     .color(@text-color, @text-value);
     color: @color;
   }
 
-  // Ok. This was breaking the navigation.
-  // And it seems to be working fine turned off. So fuck it.
-
-  // .panels {
-  //   flex: none;
-  //   flex-flow: column;
-  //   display: flex;
-  //   min-width: 100%;
-  //   position: relative;
-  // }
 
 
-
-
-  // Settings menu on left hand side
+  // Menu settings on left-hand side
   .config-menu {
-
 
     .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
@@ -179,6 +160,7 @@
       }
     }
 
+    // Button for opening Config Folder
     .button-area {
       .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
@@ -221,11 +203,11 @@
       }
     }
 
-
-    a.icon,
-    button.icon {
-      //color: @graphite;
-    }
+    // a.icon,
+    // button.icon {
+    //   .color(@text-color, @text-value);
+    //   color: @color;
+    // }
   }
 
 
@@ -242,7 +224,7 @@
   }
 
 
-  // each sheet
+  // Each section
   .section-container {
     .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
@@ -291,7 +273,6 @@
       padding: @component-padding * 3;
     }
 
-
     .section-heading {
       .color(@heading-color, @heading-value);
       color: @color;
@@ -308,7 +289,6 @@
     .color(@text-color, @text-value);
     color: @color;
   }
-
 
   .sub-section .sub-section-heading.has-items:hover::after {
     .color(@button-color, @button-value);
@@ -329,19 +309,33 @@
     }
   }
 
-
-
-
+  // ReadMe settings
+  // https://github.com/atom/settings-view/blob/master/styles/package-readme.less
   .package-readme {
     h1,
     h2,
     h3,
     h4,
-    hr,
     p,
-    li {
+    li,
+    th,
+    td,
+    blockquote {
       .color(@text-color, @text-value);
       color: @color;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
+
+    blockquote {
+      .color(@button-color, @button-value);
+      border-left-color: @color;
     }
 
     a {
@@ -356,11 +350,17 @@
       .color(@text-color, @text-value);
       color: @color;
     }
+
+    hr {
+      .color(@heading-color, @heading-value);
+      border-color: @color;
+    }
+
   }
 
 
 
-
+  // Table settings
   .table {
     .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
@@ -369,6 +369,7 @@
     border: 1px solid @bordercolor;
   }
 
+  // Package card setings
   .package-card {
     .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
@@ -419,14 +420,14 @@
       color: @color;
     }
 
-
     // A status indicator to the far right of
     // the button group
     .meta-controls .status-indicator {
-      //background-color: @trans;
+      height: 2.2em; // Ugh! Fuck this!
     }
   }
 
+  // Checkbox settings
   input[type="checkbox"] {
     .bordercolor(@background-color, @border-value);
     background-color: @bordercolor;
@@ -443,6 +444,8 @@
     }
   }
 
+
+  // UUU settings are in a sub-section-body
   .sub-section-body {
     //.bordercolor(@background-color, 5);
     // background-color: @bordercolor;
@@ -503,9 +506,11 @@
   }
 }
 
-
+// Select boxes
 .settings-view select.form-control {
   border-radius: @border-radius * 1px;
+  height: auto;
+  line-height: @component-line-height;
 
   .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
@@ -544,6 +549,7 @@
   }
 }
 
+// Gear button next to select box
 button.icon.icon-gear.active-theme-settings {
   border-radius: @border-radius * 1px;
 
@@ -581,8 +587,10 @@ button.icon.icon-gear.active-theme-settings {
   }
 }
 
+// Code styling
 pre {
   background-color: @trans;
+  font-size: @font-size;
 
   .bordercolor(@text-color, @text-value);
   border: 1px solid @bordercolor;
@@ -604,18 +612,11 @@ code {
 
 
 .badge {
-  .bgcolor(@heading-color, @button-value);
+  .bgcolor(@background-color, @nav-value);
   background-color: @bgcolor;
 
-  .color(@background-color, @background-value);
+  .color(@heading-color, @heading-value);
   color: @color;
 
   border-radius: @border-radius * 1px;
 }
-
-
-//
-// .settings-view .package-readme hr {
-//   .color(@text-color, @text-value);
-//   color: @color;
-// }

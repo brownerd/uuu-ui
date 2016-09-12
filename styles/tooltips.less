@@ -6,11 +6,43 @@
 
 
 .tooltip {
+
+  .bordercolor(@git-infoColor, 0);
+
+  //https://github.com/atom/atom-dark-ui/blob/master/styles/tooltips.less
+  &.top .tooltip-arrow {
+    border-top-color: @bordercolor;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @bordercolor;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @bordercolor;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @bordercolor;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @bordercolor;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @bordercolor;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @bordercolor;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @bordercolor;
+  }
+
   .tooltip-inner {
     line-height: 1;
     padding: .75em;
     white-space: nowrap;
     max-width: none;
+
+    .bgcolor(@git-infoColor, 0);
+    background-color: @bgcolor;
   }
 
   .keystroke {
@@ -18,7 +50,13 @@
     margin: 0 -.3em 0 .25em;
     border-radius: max(2px, @component-border-radius / 2);
 
-    background: @background-color-selected;
-    color: @red;
+    // background: @background-color-selected;
+    // color: @red;
+
+    .bgcolor(@background-color, @background-value);
+    background-color: @bgcolor;
+
+    .color(@button-color, @button-value);
+    color: @color;
   }
 }

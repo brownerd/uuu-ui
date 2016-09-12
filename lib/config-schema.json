@@ -113,9 +113,10 @@
   "border": {
     "order": 5,
     "type": "object",
-    "title": "Border value",
+    "title": "Border",
     "properties": {
       "value": {
+        "order": 1,
         "title": "Border lightness/darkness",
         "description": "This darkens or lightens borders around elements. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "type": "number",

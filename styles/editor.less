@@ -18,11 +18,14 @@ atom-text-editor[mini] {
 
   border-radius: @component-border-radius;
   max-height: 42px;
-  padding: 0 @component-padding;
+  padding: @component-padding/2 @component-padding;
 
   &.is-focused {
     .bgcolor(@text-color, @text-value);
     background-color: @bgcolor;
+
+    .bordercolor(@button-color, @button-value);
+    border: 1px solid @bordercolor;
 
     .color(@background-color, @background-value);
     color: @color;

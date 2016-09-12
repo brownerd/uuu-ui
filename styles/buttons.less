@@ -6,6 +6,9 @@
 
 .btn {
   border-radius: @border-radius * 1px;
+  height: auto;
+
+  padding: @component-padding/2 @component-padding;
 
   .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
@@ -118,6 +121,7 @@
 
 .btn-group > .btn {
   border-radius: @border-radius * 1px;
+
 
   .bordercolor(@button-color, @button-value);
   border-color: @bordercolor;
