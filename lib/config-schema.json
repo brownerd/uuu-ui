@@ -211,7 +211,7 @@
       },
       "nav": {
         "order": 2,
-        "title": "Navigation styles",
+        "title": "Menu vertical/horizontal",
         "type": "string",
         "enum": ["vertical", "horizontal"],
         "default": "horizontal"
