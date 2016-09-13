@@ -327,6 +327,10 @@
   // ReadMe settings
   // https://github.com/atom/settings-view/blob/master/styles/package-readme.less
   .package-readme {
+
+    .bgcolor(@background-color, @background-value);
+    background-color: @bgcolor;
+
     h1,
     h2,
     h3,
@@ -336,6 +340,9 @@
     th,
     td,
     blockquote {
+      .bgcolor(@background-color, @background-value);
+      background-color: @bgcolor;
+
       .color(@text-color, @text-value);
       color: @color;
     }
@@ -354,6 +361,9 @@
     }
 
     a {
+      .bgcolor(@background-color, @background-value);
+      background-color: @bgcolor;
+
       .color(@button-color, @button-value);
       color: @color;
     }
