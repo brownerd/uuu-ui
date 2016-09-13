@@ -472,9 +472,9 @@
 
   // UUU settings are in a sub-section-body
   .sub-section-body {
-    //.bordercolor(@button-color, @button-value);
-    //background-color: @bordercolor;
-    //border: 1px solid @bordercolor;
+
+    .bordercolor(@background-color, @border-value);
+    border-top: 2px solid @bordercolor;
 
     // .bordercolor(@background-color, @border-value);
     //
@@ -488,7 +488,7 @@
 
     .control-group + .control-group {
       .bordercolor(@background-color, @border-value);
-      border-top: 1px solid @bordercolor;
+      border-top: 1px dotted @bordercolor;
 
       margin-top: @component-padding * 2;
       padding-top: @component-padding * 2;
