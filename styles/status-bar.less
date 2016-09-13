@@ -8,7 +8,7 @@
 // Overrides: atom/status-bar
 
 .status-bar {
-  .bgcolor(@background-color, @nav-value - 5);
+  .bgcolor(@background-color, @background-navvalue - 5);
   background-color: @bgcolor;
 
   //border-top: 1px solid @base-border-color;
@@ -43,7 +43,7 @@
 // This is styling the Terminal Plus status-bar
 .bottom.tool-panel.panel-bottom,
 .bottom.tool-panel.panel-bottom .status-bar {
-  .bgcolor(@background-color, @nav-value);
+  .bgcolor(@background-color, @background-navvalue);
   background-color: @bgcolor;
 }
 

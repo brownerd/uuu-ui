@@ -9,7 +9,7 @@
 
 .find-and-replace {
 
-  .bgcolor(@background-color, @nav-value);
+  .bgcolor(@background-color, @background-navvalue);
   background-color: @bgcolor;
 
   .bordercolor(@background-color, @border-value);
@@ -53,6 +53,40 @@
 
     .color(@text-color, @text-value);
     color: @color;
+  }
+
+  .highlight-success {
+    & when (@button-textcolor = background) {
+      .color(@background-color, @background-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
+  }
+
+  .highlight-error {
+    & when (@button-textcolor = background) {
+      .color(@background-color, @background-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
   }
 
 }

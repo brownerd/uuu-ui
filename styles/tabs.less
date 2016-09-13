@@ -5,7 +5,7 @@
 // Overrides: atom/tabs
 
 .tab-bar {
-  .bgcolor(@background-color, @nav-value);
+  .bgcolor(@background-color, @background-navvalue);
   background-color: @bgcolor;
 
   border: none;
@@ -50,12 +50,17 @@
       background-color: @bgcolor;
 
       & when (@button-textcolor = background) {
-        .color(@background-color, @nav-value);
+        .color(@background-color, @background-navvalue);
         color: @color;
       }
 
       & when (@button-textcolor = text) {
         .color(@text-color, @text-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = heading) {
+        .color(@heading-color, @heading-value);
         color: @color;
       }
 
