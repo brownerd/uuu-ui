@@ -11,8 +11,20 @@
   .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
 
-  .color(@heading-color, @heading-value);
-  color: @color;
+  & when (@button-textcolor = background) {
+    .color(@background-color, @background-value);
+    color: @color;
+  }
+
+  & when (@button-textcolor = text) {
+    .color(@text-color, @text-value);
+    color: @color;
+  }
+
+  & when (@button-textcolor = heading) {
+    .color(@heading-color, @heading-value);
+    color: @color;
+  }
 }
 
 
@@ -38,5 +50,42 @@
 
     .color(@text-color, @text-value);
     color: @color;
+  }
+
+  .match.highlight-error {
+    .bgcolor(@git-errorColor, 0);
+    background-color: @bgcolor;
+
+    & when (@button-textcolor = background) {
+      .color(@background-color, @background-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
+  }
+
+  .highlight-success {
+    & when (@button-textcolor = background) {
+      .color(@background-color, @background-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
   }
 }
