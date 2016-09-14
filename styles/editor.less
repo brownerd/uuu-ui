@@ -6,14 +6,26 @@
 
 atom-text-editor[mini] {
 
-  .bgcolor(@text-color, @text-value);
+  .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
 
-  .color(@background-color, @background-value);
-  color: @color;
-
-  .bordercolor(@background-color, @border-value);
+  .bordercolor(@button-color, @button-value);
   border: 1px solid @bordercolor;
+
+  & when (@button-textcolor = background) {
+    .color(@background-color, @background-value);
+    color: @color;
+  }
+
+  & when (@button-textcolor = text) {
+    .color(@text-color, @text-value);
+    color: @color;
+  }
+
+  & when (@button-textcolor = heading) {
+    .color(@heading-color, @heading-value);
+    color: @color;
+  }
 
 
   border-radius: @component-border-radius;
@@ -21,27 +33,52 @@ atom-text-editor[mini] {
   padding: @component-padding/2 @component-padding;
 
   &.is-focused {
-    .bgcolor(@text-color, @text-value);
-    background-color: @bgcolor;
+    & when (@button-textcolor = background) {
+      .bgcolor(@background-color, @background-value);
+      background-color: @bgcolor;
 
-    .bordercolor(@button-color, @button-value);
-    border: 1px solid @bordercolor;
+      .color(@button-color, @button-value);
+      color: @color;
+    }
 
-    .color(@background-color, @background-value);
-    color: @color;
+    & when (@button-textcolor = text) {
+      .bgcolor(@text-color, @text-value);
+      background-color: @bgcolor;
+
+      .color(@button-color, @button-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
   }
 
   &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
   &::shadow {
     .placeholder-text {
-      .color(@background-color, @background-value);
-      color: @color;
+
+      & when (@button-textcolor = background) {
+        .color(@background-color, @background-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = text) {
+        .color(@text-color, @text-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = heading) {
+        .color(@heading-color, @heading-value);
+        color: @color;
+      }
     }
 
     //like ::selection - when you select text in an input
     .selection .region {
-      .bgcolor(@button-color, @button-value);
-      background-color: @bgcolor;
+      .bgcolor(@background-color, @background-navvalue);
+      background-color: @bgcolor !important;
 
       .color(@text-color, @text-value);
       color: @color !important;

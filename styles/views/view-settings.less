@@ -464,8 +464,20 @@
 
     &::before,
     &::after {
-      .bgcolor(@background-color, @background-value);
-      background-color: @bgcolor;
+      & when (@button-textcolor = background) {
+        .bgcolor(@background-color, @background-value);
+        background-color: @bgcolor;
+      }
+
+      & when (@button-textcolor = text) {
+        .bgcolor(@text-color, @text-value);
+        background-color: @bgcolor;
+      }
+
+      & when (@button-textcolor = heading) {
+        .bgcolor(@heading-color, @heading-value);
+        background-color: @bgcolor;
+      }
     }
   }
 
@@ -525,7 +537,7 @@
       justify-content: flex-end;
       width: 100%;
 
-      .editor {
+      atom-text-editor {
         width: 50%;
       }
     }

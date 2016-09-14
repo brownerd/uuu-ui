@@ -18,6 +18,10 @@
 
   font-size: @font-size;
 
+  line-height: @component-line-height;
+  height: 2em;
+
+
   & a {
     .color(@button-color, @button-value);
     color: @color;
@@ -35,14 +39,24 @@
     .color(@button-color, @button-value);
     color: @color;
   }
+
+  .status-bar-left {
+    padding-top: 2px;
+    padding-left: @component-padding;
+  }
+
+  .status-bar-right {
+    padding-top: 2px;
+    padding-right: @component-padding;
+  }
 }
 
 
 
 
 // This is styling the Terminal Plus status-bar
-.bottom.tool-panel.panel-bottom,
-.bottom.tool-panel.panel-bottom .status-bar {
+.bottom.tool-panel panel-bottom,
+.bottom.tool-panel panel-bottom .status-bar {
   .bgcolor(@background-color, @background-navvalue);
   background-color: @bgcolor;
 }

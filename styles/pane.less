@@ -1,10 +1,11 @@
 // All panes
-//
+
 atom-pane-container atom-pane .item-views .pane-item {
   .bgcolor(@background-color, @background-value);
+  background-color: @bgcolor !important;
 
   & when (@settingsPage-background = solid) {
-    background-color: @bgcolor;
+    background-color: @bgcolor !important;
   }
 
   .bordercolor(@background-color, @border-value);
@@ -17,7 +18,7 @@ atom-pane-container atom-pane .item-views .pane-item {
   }
 
   & when (@settingsPage-background = triangle) {
-    background:
+    background-image:
     linear-gradient(115deg, transparent 75%, @bordercolor 75%) 0 0,
     linear-gradient(245deg, transparent 75%, @bordercolor 75%) 0 0,
     linear-gradient(115deg, transparent 75%, @bordercolor 75%) 7px -15px,
@@ -27,13 +28,11 @@ atom-pane-container atom-pane .item-views .pane-item {
   }
 
   & when (@settingsPage-background = pinstripe) {
-    background-color: @bgcolor;
     background-image: repeating-linear-gradient(-45deg, @trans, @trans 19px, @bordercolor 19px, @bordercolor 20px);
   }
 
   & when (@settingsPage-background = dot) {
-    background-color: @bgcolor;
-    background-image: radial-gradient(@seethru 15%, @trans 16%), radial-gradient(@seethru 15%, @trans 16%);
+    background-image: radial-gradient(@bordercolor 15%, @trans 16%), radial-gradient(@bordercolor 15%, @trans 16%);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
   }
