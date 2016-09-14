@@ -29,14 +29,16 @@
 }
 
 .tool-panel {
-  .header-item.description {
+  .header-item.description,
+  .options-label,
+  .options {
     .color(@text-color, @text-value);
-    color: @color;
+    color: @color !important;
   }
 
-  .project-find .description .subtle-info-message {
+  .description .subtle-info-message {
     .color(@text-color, @text-value);
-    color: @color;
+    color: @color !important;
   }
 
   .description .subtle-info-message .highlight,
