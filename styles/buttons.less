@@ -13,10 +13,8 @@
   .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
 
-  .bordercolor(@button-color, @border-value);
-  border-color: @bordercolor;
-  //border: 1px solid @bordercolor;
-  border: none;
+  .bordercolor(@button-color, @button-value);
+  border: 1px solid @bordercolor;
 
   & when (@button-textcolor = background) {
     .color(@background-color, @background-value);
@@ -35,11 +33,29 @@
 
   &:hover,
   &:focus {
-    .bgcolor(@background-color, @background-value);
-    background-color: @bgcolor;
+    & when (@button-textcolor = background) {
+      .bgcolor(@background-color, @background-navvalue);
+      background-color: @bgcolor;
 
-    .color(@button-color, @button-value);
-    color: @color;
+      .color(@button-color, @button-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .bgcolor(@text-color, @text-value);
+      background-color: @bgcolor;
+
+      .color(@button-color, @button-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .bgcolor(@heading-color, @heading-value);
+      background-color: @bgcolor;
+
+      .color(@button-color, @button-value);
+      color: @color;
+    }
   }
 
   &:active {
