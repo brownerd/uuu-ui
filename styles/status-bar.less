@@ -18,6 +18,10 @@
 
   font-size: @font-size;
 
+  line-height: @component-line-height;
+  height: 2em;
+
+
   & a {
     .color(@button-color, @button-value);
     color: @color;
@@ -34,6 +38,16 @@
   linter-bottom-tab.active {
     .color(@button-color, @button-value);
     color: @color;
+  }
+
+  .status-bar-left {
+    padding-top: 2px;
+    padding-left: @component-padding;
+  }
+
+  .status-bar-right {
+    padding-top: 2px;
+    padding-right: @component-padding;
   }
 }
 
