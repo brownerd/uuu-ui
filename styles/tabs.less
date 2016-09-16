@@ -35,8 +35,11 @@
 
 
     &:hover {
-      .bgcolor(@background-color, @background-value);
-      background-color: darken(@bgcolor, 5%);
+      .bgcolor(@text-color, @text-value);
+      background-color: @bgcolor;
+
+      .color(@background-color, @background-value);
+      color: @color;
 
       .close-icon {
         // transform: scale(1) rotate(90deg);
