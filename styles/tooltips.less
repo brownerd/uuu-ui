@@ -43,6 +43,21 @@
 
     .bgcolor(@git-infoColor, 0);
     background-color: @bgcolor;
+
+    & when (@button-textcolor = background) {
+      .color(@background-color, @background-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
   }
 
   .keystroke {
