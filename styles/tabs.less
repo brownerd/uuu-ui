@@ -40,8 +40,8 @@
       color: @color;
 
       .close-icon {
-        // transform: scale(1) rotate(90deg);
-        // transition: .3s ease-in-out;
+        .color(@background-color, @background-navvalue);
+        color: @color;
       }
     }
 
@@ -93,54 +93,18 @@
       // transform: scale(0) rotate(0);
       // transform-origin: center center
 
-      & when (@button-textcolor = background) {
-        .color(@background-color, @background-value);
-        color: @color;
-      }
-
-      & when (@button-textcolor = text) {
-        .color(@text-color, @text-value);
-        color: @color;
-      }
-
-      & when (@button-textcolor = heading) {
-        .color(@heading-color, @heading-value);
-        color: @color;
-      }
+      .color(@background-color, @background-navvalue);
+      color: spin(@color, 180);
 
       &:hover {
-        & when (@button-textcolor = background) {
-          .color(@background-color, @background-value);
-          color: spin(@color, 180);
-        }
-
-        & when (@button-textcolor = text) {
-          .color(@text-color, @text-value);
-          color: spin(@color, 180);
-        }
-
-        & when (@button-textcolor = heading) {
-          .color(@heading-color, @heading-value);
-          color: spin(@color, 180);
-        }
+        .color(@button-color, @button-value);
+        color: spin(@color, 180);
       }
     }
 
     &.active .close-icon:hover {
-      & when (@button-textcolor = background) {
-        .color(@background-color, @background-value);
-        color: spin(@color, 180);
-      }
-
-      & when (@button-textcolor = text) {
-        .color(@text-color, @text-value);
-        color: spin(@color, 180);
-      }
-
-      & when (@button-textcolor = heading) {
-        .color(@heading-color, @heading-value);
-        color: spin(@color, 180);
-      }
+      .color(@button-color, @button-value);
+      color: spin(@color, 180);
     }
 
 
