@@ -72,39 +72,23 @@
     }
 
 
-    // Modified Icon (the blue circle) -------------------
-    &.modified:not(:hover) .close-icon {
-      .bgcolor(@button-color, @button-value);
-
-      top: 50%;
-      right: @component-padding + 4px; // 4px -> half of icon size
-      margin-top: -3px;
-      border-color: spin(@bgcolor, 180);
-    }
-    &.modified:hover .close-icon {
-      color: currentColor;
-    }
-
-
-
-
     // Close Icon (the X) -------------------
     .close-icon {
       // transform: scale(0) rotate(0);
       // transform-origin: center center
 
       .color(@background-color, @background-navvalue);
-      color: spin(@color, 180);
+      color: spin(saturate(@color, 100%), 180);
 
       &:hover {
         .color(@button-color, @button-value);
-        color: spin(@color, 180);
+        color: spin(saturate(@color, 100%), 180);
       }
     }
 
     &.active .close-icon:hover {
       .color(@button-color, @button-value);
-      color: spin(@color, 180);
+      color: spin(saturate(@color, 100%), 180);
     }
 
 
@@ -119,6 +103,21 @@
         visibility: hidden;
       }
     }
+
+    // Modified Icon (the blue circle) -------------------
+    &.modified:not(:hover) .close-icon {
+      .color(@button-color, @button-value);
+
+      top: 50%;
+      right: @component-padding + 4px; // 4px -> half of icon size
+      margin-top: -3px;
+      border-color: spin(saturate(@color, 100%), 180);
+    }
+    &.modified:hover .close-icon {
+      .color(@button-color, @button-value);
+      color: spin(saturate(@color, 100%), 180);
+    }
+
   }
 }
 
