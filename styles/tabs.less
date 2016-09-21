@@ -33,7 +33,7 @@
 
 
     &:hover {
-      .bgcolor(@text-color, @text-value);
+      .bgcolor(@button-color, @button-value);
       background-color: @bgcolor;
 
       .color(@background-color, @background-navvalue);
@@ -77,18 +77,31 @@
       // transform: scale(0) rotate(0);
       // transform-origin: center center
 
-      .color(@background-color, @background-navvalue);
-      color: spin(saturate(@color, 100%), 180);
+      & when (@button-textcolor = background) {
+        .color(@background-color, @background-navvalue);
+        color: @color;
+      }
+
+      & when (@button-textcolor = text) {
+        .color(@text-color, @text-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = heading) {
+        .color(@heading-color, @heading-value);
+        color: @color;
+      }
+
 
       &:hover {
         .color(@button-color, @button-value);
-        color: spin(saturate(@color, 100%), 180);
+        color: spin(saturate(@color, 100%), 160);
       }
     }
 
     &.active .close-icon:hover {
       .color(@button-color, @button-value);
-      color: spin(saturate(@color, 100%), 180);
+      color: spin(saturate(@color, 100%), 160);
     }
 
 
@@ -107,15 +120,17 @@
     // Modified Icon (the blue circle) -------------------
     &.modified:not(:hover) .close-icon {
       .color(@button-color, @button-value);
+      border-color: spin(saturate(@color, 100%), 160);
 
       top: 50%;
       right: @component-padding + 4px; // 4px -> half of icon size
       margin-top: -3px;
-      border-color: spin(saturate(@color, 100%), 180);
+      //border-color: spin(saturate(@color, 100%), 160);
+      //border: none;
     }
     &.modified:hover .close-icon {
       .color(@button-color, @button-value);
-      color: spin(saturate(@color, 100%), 180);
+      color: spin(saturate(@color, 100%), 160);
     }
 
   }
