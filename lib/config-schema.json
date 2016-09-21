@@ -24,7 +24,7 @@
       },
       "value": {
         "order": 2,
-        "title": "Background lightness/darkness",
+        "title": "Background darkness/lightness",
         "description": "This darkens or lightens the background color. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "type": "number",
         "default": 0,
@@ -33,7 +33,7 @@
       },
       "navvalue": {
         "order": 3,
-        "title": "Tree-view and Tab-bar lightness/darkness",
+        "title": "Tree-view and Tab-bar darkness/lightness",
         "description": "This darkens or lightens the tree-view, tab-bar, find-and-replace panel and popup modal backgrounds. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "type": "number",
         "default": -30,
@@ -56,7 +56,7 @@
       },
       "value": {
         "order": 2,
-        "title": "Text lightness/darkness",
+        "title": "Text darkness/lightness",
         "description": "This darkens or lightens the text color. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "type": "number",
         "default": 0,
@@ -79,7 +79,7 @@
       },
       "value": {
         "order": 2,
-        "title": "Heading lightness/darkness",
+        "title": "Heading darkness/lightness",
         "type": "number",
         "description": "This darkens or lightens the heading color. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "default": 0,
@@ -102,7 +102,7 @@
       },
       "value": {
         "order": 2,
-        "title": "Backgound and link text lightness/darkness",
+        "title": "Backgound and link text darkness/lightness",
         "type": "number",
         "description": "This darkens or lightens the button color. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "default": 0,
@@ -126,7 +126,7 @@
     "properties": {
       "value": {
         "order": 1,
-        "title": "Border lightness/darkness",
+        "title": "Border darkness/lightness",
         "description": "This darkens or lightens borders around elements. Set negative numbers to darken and positive numbers to lighten. Range is -100 through 100",
         "type": "number",
         "default": -25,
