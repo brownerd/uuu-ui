@@ -61,3 +61,28 @@
   .bgcolor(@background-color, @background-navvalue);
   background-color: @bgcolor;
 }
+
+
+
+.list-tree.has-collapsable-children .list-nested-item {
+
+  & > .list-tree > li.status-modified,
+  & > .list-group > li.status-modified {
+    .color(@git-warningColor, @text-value);
+    color: @color;
+  }
+
+  & > .list-tree > li.status-added,
+  & > .list-group > li.status-added {
+    .color(@git-successColor, @text-value);
+    color: @color;
+  }
+
+  & > .list-tree > li,
+  & > .list-group > li,
+  & > .list-tree > li.selected,
+  & > .list-group > li.selected {
+    .color(@text-color, @text-value);
+    color: @color;
+  }
+}
