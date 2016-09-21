@@ -78,11 +78,26 @@
     color: @color;
   }
 
-  & > .list-tree > li,
-  & > .list-group > li,
   & > .list-tree > li.selected,
   & > .list-group > li.selected {
-    .color(@text-color, @text-value);
-    color: @color;
+    & when (@button-textcolor = background) {
+      .color(@background-color, @background-navvalue);
+      color: @color;
+    }
+
+    & when (@button-textcolor = text) {
+      .color(@text-color, @text-value);
+      color: @color;
+    }
+
+    & when (@button-textcolor = heading) {
+      .color(@heading-color, @heading-value);
+      color: @color;
+    }
+  }
+
+  & > .list-tree > li,
+  & > .list-group > li {
+    color: @text-color;
   }
 }

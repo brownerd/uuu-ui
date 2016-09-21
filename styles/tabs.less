@@ -93,13 +93,54 @@
       // transform: scale(0) rotate(0);
       // transform-origin: center center
 
+      & when (@button-textcolor = background) {
+        .color(@background-color, @background-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = text) {
+        .color(@text-color, @text-value);
+        color: @color;
+      }
+
+      & when (@button-textcolor = heading) {
+        .color(@heading-color, @heading-value);
+        color: @color;
+      }
+
       &:hover {
-        color: @text-color-selected;
+        & when (@button-textcolor = background) {
+          .color(@background-color, @background-value);
+          color: spin(@color, 180);
+        }
+
+        & when (@button-textcolor = text) {
+          .color(@text-color, @text-value);
+          color: spin(@color, 180);
+        }
+
+        & when (@button-textcolor = heading) {
+          .color(@heading-color, @heading-value);
+          color: spin(@color, 180);
+        }
       }
     }
 
     &.active .close-icon:hover {
-      color: @text-color;
+      & when (@button-textcolor = background) {
+        .color(@background-color, @background-value);
+        color: spin(@color, 180);
+      }
+
+      & when (@button-textcolor = text) {
+        .color(@text-color, @text-value);
+        color: spin(@color, 180);
+      }
+
+      & when (@button-textcolor = heading) {
+        .color(@heading-color, @heading-value);
+        color: spin(@color, 180);
+      }
     }
 
 
