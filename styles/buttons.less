@@ -147,7 +147,13 @@
   }
 }
 
-//
+.btn-group > .btn:last-child,
+.btn-group > .btn.selected:last-child,
+.btn-group > .dropdown-toggle {
+  border-right: none;
+  border-top-right-radius: @border-radius * 1px;
+  border-bottom-right-radius: @border-radius * 1px;
+}
 // Button Group -----------------------
 
 .btn-group > .btn {

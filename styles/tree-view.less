@@ -23,7 +23,39 @@
 
 
 
-  .list-item.selected {
+  // &:hover {
+  //   .bgcolor(@background-color, @background-value);
+  //   background-color: @bgcolor;
+  // }
+
+  // .directory.entry.list-nested-item.status-modified {
+  //   .color(@git-warningColor, @text-value);
+  //   color: @color;
+  // }
+  //
+  // .directory.entry.list-nested-item {
+  //   .color(@text-color, @text-value);
+  //   color: @color;
+  // }
+
+  li.directory.status-modified,
+  li.file.status-modified {
+    .color(@git-warningColor, @text-value);
+    color: @color;
+  }
+
+  li.directory:not(.status-modified),
+  li.file:not(.status-modified) {
+    .color(@text-color, @text-value);
+    color: @color;
+  }
+
+  li.file.status-added {
+    .color(@git-successColor, @text-value);
+    color: @color;
+  }
+
+  li.file.selected {
 
     .bgcolor(@button-color, @button-value);
     background-color: @bgcolor;
@@ -49,15 +81,51 @@
     }
   }
 
-  // &:hover {
-  //   .bgcolor(@background-color, @background-value);
-  //   background-color: @bgcolor;
-  // }
 }
 
-.list-group .selected::before,
-.list-tree .selected::before {
-  content: '';
-  .bgcolor(@background-color, @background-navvalue);
-  background-color: @bgcolor;
-}
+// .list-group .selected::before,
+// .list-tree .selected::before {
+//   content: '';
+//   .bgcolor(@background-color, @background-navvalue);
+//   background-color: @bgcolor;
+// }
+
+
+//
+// .list-tree.has-collapsable-children .list-nested-item {
+//
+//   & > .list-tree > li.status-modified,
+//   & > .list-group > li.status-modified {
+//     .color(@git-warningColor, @text-value);
+//     color: @color;
+//   }
+//
+//   & > .list-tree > li.status-added,
+//   & > .list-group > li.status-added {
+//     .color(@git-successColor, @text-value);
+//     color: @color;
+//   }
+//
+//   & > .list-tree > li.selected,
+//   & > .list-group > li.selected {
+//     & when (@button-textcolor = background) {
+//       .color(@background-color, @background-navvalue);
+//       color: @color;
+//     }
+//
+//     & when (@button-textcolor = text) {
+//       .color(@text-color, @text-value);
+//       color: @color;
+//     }
+//
+//     & when (@button-textcolor = heading) {
+//       .color(@heading-color, @heading-value);
+//       color: @color;
+//     }
+//   }
+//
+//   & > .list-tree > li,
+//   & > .list-group > li {
+//     color: @text-color;
+//   }
+// }
