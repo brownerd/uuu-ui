@@ -38,7 +38,8 @@
   //   color: @color;
   // }
 
-  li.directory.status-modified {
+  li.directory.status-modified,
+  li.file.status-modified {
     .color(@git-warningColor, @text-value);
     color: @color;
   }
@@ -46,6 +47,11 @@
   li.directory:not(.status-modified),
   li.file:not(.status-modified) {
     .color(@text-color, @text-value);
+    color: @color;
+  }
+
+  li.file.status-added {
+    .color(@git-successColor, @text-value);
     color: @color;
   }
 
