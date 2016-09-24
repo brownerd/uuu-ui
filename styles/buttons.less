@@ -67,7 +67,7 @@
   }
 
   &.selected {
-    .bgcolor(@button-color, @background-navvalue);
+    .bgcolor(@background-color, @background-navvalue);
     background-color: @bgcolor;
 
     & when (@button-textcolor = background) {
@@ -150,7 +150,10 @@
 .btn-group > .btn:last-child,
 .btn-group > .btn.selected:last-child,
 .btn-group > .dropdown-toggle {
-  border-right: none;
+  .bordercolor(@button-color, @button-value);
+  //border-color: @bordercolor;
+
+  border-right: 1px solid @bordercolor;
   border-top-right-radius: @border-radius * 1px;
   border-bottom-right-radius: @border-radius * 1px;
 }
@@ -188,6 +191,11 @@
 
   &:last-child {
     border-right: 1px solid @bordercolor;
+  }
+
+  &.selected {
+    .color(@button-color, @button-value);
+    color: @color;
   }
 
   &:hover {

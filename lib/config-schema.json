@@ -200,18 +200,19 @@
     "order": 8,
     "type": "object",
     "title": "Settings pages only",
-    "description": "This styles the background on all settings pages. Press 'cmd + ,' to see the settings page.",
     "properties": {
       "background": {
         "order": 1,
         "title": "Background style",
+        "description": "This styles the background on all settings pages. *Pinstripe looks best on Retina screens.",
         "type": "string",
-        "enum": ["solid", "dot", "pinstripe", "triangle"],
+        "enum": ["solid", "triangle", "dot", "pinstripe"],
         "default": "triangle"
       },
       "nav": {
         "order": 2,
         "title": "Menu vertical/horizontal",
+        "description": "This switches between a vertical and horizontal menu settings nav",
         "type": "string",
         "enum": ["vertical", "horizontal"],
         "default": "horizontal"

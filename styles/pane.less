@@ -4,12 +4,14 @@ atom-pane-container atom-pane .item-views .pane-item {
   .bgcolor(@background-color, @background-value);
   background-color: @bgcolor !important;
 
+  // Conditional setting for a solid bg
   & when (@settingsPage-background = solid) {
     background-color: @bgcolor !important;
   }
 
   .bordercolor(@background-color, @border-value);
 
+  // Conditional setting for changing nav orientation
   & when (@settingsPage-nav = horizontal) {
     display: flex;
     flex-direction: column;
@@ -17,6 +19,15 @@ atom-pane-container atom-pane .item-views .pane-item {
     height: 100%;
   }
 
+  // Conditional setting for a gradient bg
+  // I don't think this looks good, so I'm going to
+  // disable it in the config, but I'll leave
+  // the style here
+  & when (@settingsPage-background = gradient) {
+    background-image: linear-gradient( 0deg, darken(@bgcolor, 1%) 10%, lighten(@bgcolor, 5%) );
+  }
+
+  // Conditional setting for a triangle patterned bg
   & when (@settingsPage-background = triangle) {
     background:
     linear-gradient(115deg, transparent 75%, @bordercolor 75%) 0 0,
@@ -27,10 +38,13 @@ atom-pane-container atom-pane .item-views .pane-item {
     background-size: 15px 30px
   }
 
+  // Conditional setting for a pinstripe bg
+  // only looks good on Retina screens
   & when (@settingsPage-background = pinstripe) {
     background-image: repeating-linear-gradient(-45deg, @trans, @trans 19px, @bordercolor 19px, @bordercolor 20px);
   }
 
+  // Conditional setting for a dotted bg
   & when (@settingsPage-background = dot) {
     background-image: radial-gradient(@bordercolor 15%, @trans 16%), radial-gradient(@bordercolor 15%, @trans 16%);
     background-size: 20px 20px;
