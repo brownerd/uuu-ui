@@ -216,6 +216,9 @@
     }
 
     & when (@button-textcolor = heading) {
+      .bgcolor(@background-color, @background-value);
+      background-color: @bgcolor;
+      
       .color(@heading-color, @heading-value);
       color: @color;
     }
