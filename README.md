@@ -1,10 +1,10 @@
-# UUU UI theme
+# urawsm UI theme
 
-This is a UI for UUU. So, make it UUUr way.
+This is a UI for urawsm. So, make it urawsmr way.
 
 You will want to install:
-[UUU-Syntax]() - Make your own syntax themes in minutes
-[UUU]() - Export and import your syntax and ui themes
+[urawsm-Syntax]() - Make your own syntax themes in minutes
+[urawsm]() - Export and import your syntax and ui themes
 
 ## Check it out
 

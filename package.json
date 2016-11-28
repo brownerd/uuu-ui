@@ -1,9 +1,9 @@
 {
-  "name": "uuu-ui",
+  "name": "urawsm-ui",
   "theme": "ui",
   "main": "./lib/main",
   "version": "0.0.0",
-  "description": "A UI for UUU to customize",
+  "description": "A UI for urawsm to customize",
   "keywords": [
     "ui",
     "theme"
