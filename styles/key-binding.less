@@ -46,10 +46,22 @@ background-color: @bgcolor;
   .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
 
-  border-radius: @component-border-radius;
+  & when (@button-textcolor = background) {
+    .color(@background-color, @background-value);
+    color: @color!important;
+  }
 
-  .color(@text-color, @text-value);
-  color: @color;
+  & when (@button-textcolor = text) {
+    .color(@text-color, @text-value);
+    color: @color!important;
+  }
+
+  & when (@button-textcolor = heading) {
+    .color(@heading-color, @heading-value);
+    color: @color!important;
+  }
+
+  border-radius: @component-border-radius;
 
   display: inline-block;
   font-size: .8em;

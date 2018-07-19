@@ -33,6 +33,12 @@
     }
   }
 
+  .cursor-position a,
+  .cursor-position a:hover {
+    .color(@button-color, @button-value);
+    color: @color!important;
+  }
+
   atom-text-editor::shadow .linter-highlight.status-success,
   .linter-highlight.status-success,
   linter-bottom-tab.active {

@@ -2,3 +2,11 @@
 @import "view-project-search";
 @import "view-settings";
 @import "view-styleguide";
+
+atom-workspace {
+  .bgcolor(@background-color, @background-navvalue);
+  background-color: @bgcolor;
+
+  .color(@text-color, @text-value);
+  color: @color;
+}

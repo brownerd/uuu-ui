@@ -1,15 +1,4 @@
 {
-  "resetAllStyles": {
-    "type": "object",
-    "title": "Reset",
-    "properties": {
-      "reset": {
-        "title": "Reset to default styles",
-        "type": "boolean",
-        "default": false
-      }
-    }
-  },
   "background": {
     "order": 1,
     "type": "object",
@@ -144,29 +133,8 @@
       }
     }
   },
-  "findAndReplace": {
-    "order": 6,
-    "type": "object",
-    "title": "Find and replace border color",
-    "properties": {
-      "borderHighLightColor": {
-        "order": 1,
-        "title": "Border highlight color",
-        "description": "This sets the border of the rectangle that appears around search terms. Just do a seach real quick to see what I'm talking about.",
-        "type": "color",
-        "default": "rgba(255, 255, 255, 1)"
-      },
-      "borderHighLightColorCurrent": {
-        "order": 2,
-        "title": "Border highlight color - current selected term",
-        "description": "This sets the border of the rectangle of the currently selected search terms. Just do a seach real quick to see what I'm talking about.",
-        "type": "color",
-        "default": "rgba(0, 255, 102, 1)"
-      }
-    }
-  },
   "git": {
-    "order": 7,
+    "order": 6,
     "type": "object",
     "title": "Special colors",
     "properties": {
@@ -197,7 +165,7 @@
     }
   },
   "settingsPage": {
-    "order": 8,
+    "order": 7,
     "type": "object",
     "title": "Settings pages only",
     "properties": {
@@ -220,6 +188,18 @@
       "border": {
         "order": 3,
         "title": "Borders for settings page containers",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  },
+  "resetAllStyles": {
+    "order": 8,
+    "type": "object",
+    "title": "Reset",
+    "properties": {
+      "reset": {
+        "title": "Reset to default styles",
         "type": "boolean",
         "default": false
       }

@@ -1,0 +1,75 @@
+// This is the selected items matched text
+.autocomplete-active .selected .character-match {
+  .bgcolor(@background-color, @background-navvalue);
+  color: contrast(@bgcolor)!important;
+}
+
+// This is the selected items text
+.autocomplete-active .selected .word {
+  .color(@text-color, @text-value);
+  //.color(@background-color, @background-navvalue);
+  color: contrast(@color)!important;
+}
+
+
+// This is the bg of the selected list item
+.autocomplete-active .selected {
+  .bgcolor(@background-color, @background-navvalue);
+  background-color: @bgcolor!important;
+}
+
+
+// This is the NON selected matched text
+.autocomplete-active .character-match {
+  .bgcolor(@background-color, @background-navvalue);
+  color: contrast(@bgcolor)!important;
+}
+
+// This is the NON seledted text
+.autocomplete-active .word {
+  .bgcolor(@background-color, @background-navvalue);
+  color: contrast(@bgcolor)!important;
+}
+
+
+.autocomplete-active {
+  // .bgcolor(@background-color, @background-navvalue);
+  // background-color: @bgcolor!important;
+  //
+  // color: contrast(@bgcolor)!important;
+}
+
+
+// Here is the HTML for it below
+  // <div class="suggestion-list-scroller" style="max-height: 280px;">
+  //   <ol class="list-group">
+  //     <li data-index="0" class="selected">
+  //       <span class="word-container">
+  //         <span class="word">
+  //           <span class="character-match">s</span>
+  //           <span class="character-match">e</span>
+  //           <span class="character-match">t</span>
+  //           <span class="character-match">t</span>
+  //           <span class="character-match">i</span>
+  //           <span class= "character-match">n</span>
+  //           <span class="character-match">g</span>
+  //         s</span>
+  //       </span>
+  //     </li>
+  //
+  //
+  //     <li data-index="1" class="">
+  //       <span class="word-container">
+  //         <span class="word">
+  //           <span class="character-match">S</span>
+  //           <span class="character-match">e</span>
+  //           <span class="character-match">t</span>
+  //           <span class="character-match">t</span>
+  //           <span class="character-match">i</span>
+  //           <span class="character-match">n</span>
+  //           <span class="character-match">g</span>
+  //         s</span>
+  //       </span>
+  //     </li>
+  //   </ol>
+  // </div>

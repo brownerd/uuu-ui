@@ -317,11 +317,19 @@
     color: @color;
   }
 
+  & > .package-detail section.section.settings-panel {
+    .bgcolor(@background-color, @background-value);
+    background-color: @bgcolor;
+
+    border-top: 1px solid @background-color;
+  }
+
 
   .package-detail .package-card:hover {
 
     .bgcolor(@background-color, @background-value);
     background-color: @bgcolor;
+
     &:hover {
       .bordercolor(@background-color, @border-value);
 
