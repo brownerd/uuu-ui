@@ -21,6 +21,7 @@
 
 }
 
+.path-name,
 .find-and-replace .options-label .options,
 .project-find .options-label .options,
 .find-and-replace .options-label,
@@ -69,8 +70,8 @@
   }
 
   .highlight-info {
-    .bgcolor(@button-color, @button-value);
-    background-color: @bgcolor;
+    //.bgcolor(@button-color, @button-value);
+    background-color: @button-textcolor;
 
     .color(@text-color, @text-value);
     color: @color;
@@ -138,19 +139,14 @@
 // https://discuss.atom.io/t/how-to-change-find-and-replace-highlight-color/14750
 
 atom-text-editor::shadow .highlight.find-result .region {
-
-//atom-text-editor .highlight.find-result .region {
-  .bordercolor(@findAndReplace-borderHighLightColor, @heading-value);
-  border-color: @bordercolor;
+  // .bordercolor(@findAndReplace-borderHighLightColor, @heading-value);
+  // border-color: @bordercolor;
   //border-width: 2px;
 }
 
 atom-text-editor::shadow .highlight.current-result .region,
 atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
-
-//atom-text-editor .highlight.current-result .region,
-//atom-text-editor .highlight.current-result ~ .highlight.selection .region {
-  .bordercolor(@findAndReplace-borderHighLightColorCurrent, @button-value);
-  border-color: @bordercolor;
+  // .bordercolor(@findAndReplace-borderHighLightColorCurrent, @button-value);
+  // border-color: @bordercolor;
   border-width: 2px;
 }
