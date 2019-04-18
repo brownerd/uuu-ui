@@ -120,8 +120,8 @@
 
 .bgcolor(@button-color, @button-value);
 
-.btn.btn-primary { .btn-color(@bgcolor); }
-.btn.btn-info    { .btn-color(@bgcolor); }
+// .btn.btn-primary { .btn-color(@bgcolor); }
+// .btn.btn-info    { .btn-color(@bgcolor); }
 .btn.btn-success { .btn-color(@background-color-success); }
 .btn.btn-warning { .btn-color(@background-color-warning); }
 .btn.btn-error   { .btn-color(@background-color-error); }
@@ -218,7 +218,7 @@
     & when (@button-textcolor = heading) {
       .bgcolor(@background-color, @background-value);
       background-color: @bgcolor;
-      
+
       .color(@heading-color, @heading-value);
       color: @color;
     }

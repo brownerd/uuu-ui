@@ -138,14 +138,14 @@
 // How to change find and replace highlight color?
 // https://discuss.atom.io/t/how-to-change-find-and-replace-highlight-color/14750
 
-atom-text-editor::shadow .highlight.find-result .region {
+atom-text-editor.editor .highlight.find-result .region {
   // .bordercolor(@findAndReplace-borderHighLightColor, @heading-value);
   // border-color: @bordercolor;
   //border-width: 2px;
 }
 
-atom-text-editor::shadow .highlight.current-result .region,
-atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
+atom-text-editor.editor .highlight.current-result .region,
+atom-text-editor.editor .highlight.current-result ~ .highlight.selection .region {
   // .bordercolor(@findAndReplace-borderHighLightColorCurrent, @button-value);
   // border-color: @bordercolor;
   border-width: 2px;

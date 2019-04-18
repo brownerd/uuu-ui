@@ -497,7 +497,7 @@
   }
 
 
-  // urawsm settings are in a sub-section-body
+  // uuu settings are in a sub-section-body
   .sub-section-body {
 
     .bordercolor(@background-color, @border-value);
@@ -700,4 +700,53 @@ code {
   color: @color;
 
   border-radius: @border-radius * 1px;
+}
+
+.controls {
+  display: flex;
+  width: 100%;
+
+  .sub-section {
+    width: 100%;
+  }
+
+  .controls,
+  .control-label,
+  .form-control {
+    flex: 1;
+  }
+
+}
+
+.settings-view .sub-section {
+  margin: 0;
+}
+.color {
+  width: 100%;
+
+  label {
+    display: flex;
+    width: 100%;
+
+    input[type="color"],
+    div {
+      flex: 1;
+    }
+  }
+}
+
+.controls .editor-container atom-text-editor {
+  height: 2rem;
+  width: 100%!important;
+}
+
+.settings-view .themes-panel .themes-picker-item {
+  display: grid;
+  .controls {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .control-label {
+    width: 100%;
+  }
 }

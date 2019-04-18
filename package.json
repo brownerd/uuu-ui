@@ -1,14 +1,14 @@
 {
-  "name": "urawsm-ui",
+  "name": "uuu-ui",
   "theme": "ui",
   "main": "./lib/main",
   "version": "1.0.0",
-  "description": "URAWSM! Make UR own AWSM ui styles in seconds!",
+  "description": "Make ui styles UUU want in seconds!",
   "keywords": [
     "ui",
     "theme"
   ],
-  "repository": "https://github.com/atom-community/ui-theme-template",
+  "repository": "",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

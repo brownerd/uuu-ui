@@ -73,3 +73,13 @@
   //     </li>
   //   </ol>
   // </div>
+
+[class*="suggestion-description"] {
+  font-size: 1em!important;
+}
+
+.suggestion-description-more-link {
+  .color(@text-color, @text-value);
+  //.color(@background-color, @background-navvalue);
+  color: contrast(@color)!important;
+}
