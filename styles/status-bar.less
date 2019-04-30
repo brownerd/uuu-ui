@@ -13,7 +13,7 @@
 
   //border-top: 1px solid @base-border-color;
 
-  .color(@background-color, @text-value);
+  .color(@text-color, @text-value);
   color: @color;
 
   font-size: @font-size;
@@ -23,7 +23,8 @@
 
 
   & a {
-    .color(@button-color, @button-value);
+    //.color(@button-color, @button-value);
+    .color(@text-color, @text-value);
     color: @color;
 
     &:hover {

@@ -1,6 +1,6 @@
 # UUU ui-theme
 
-Make UR own AWMS ui-theme easily.
+Make the UI-theme UUU want.
 
 Just watch this [video]()
 
@@ -9,6 +9,7 @@ Just watch this [video]()
 - Install [UUU-UI]() and activate it
 - Install [UUU-SYNTAX]() and activate it
 - Install [UUU]() and activate it
+- Install [uuu-language-files]()
 - Click on the gear icon to access settings for UUU-UI
 - Style away!
 
