@@ -5,7 +5,7 @@ UUU-ui is a package that enables UUU to make your own UI themes from within Atom
 Just watch this overview [video](https://youtu.be/C2N2O3WR-3U)
 
 ## Documentation
-Visit the [UUU](https://uuu.works) site for more info and documentation.
+Visit the [UUU](https://uuu.works/docs/) site for more info and documentation.
 
 ## Installation/Dependencies
 - UUU-UI
