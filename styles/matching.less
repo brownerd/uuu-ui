@@ -1,0 +1,74 @@
+// I might used this later for handling text-match-color
+
+
+.command-palette .list-group .character-match {
+  .color(@text-color, @text-value);
+  color: @color;
+
+  font-weight: bold;
+  text-decoration: underline;
+
+  // .bgcolor(@button-color, @button-value);
+  // background-color: @bgcolor;
+  //
+  // & when (@button-textcolor = background) {
+  //   .color(@background-color, @background-value);
+  //   color: @color;
+  // }
+  //
+  // & when (@button-textcolor = text) {
+  //   .color(@text-color, @text-value);
+  //   color: @color;
+  // }
+  //
+  // & when (@button-textcolor = heading) {
+  //   .color(@heading-color, @heading-value);
+  //   color: @color;
+  // }
+  //
+  // border-radius: @component-border-radius;
+
+}
+
+.results-view .match {
+  .bgcolor(@button-color, @button-value);
+  background-color: @bgcolor;
+
+  & when (@button-textcolor = background) {
+    .color(@background-color, @background-value);
+    color: @color!important;
+  }
+
+  & when (@button-textcolor = text) {
+    .color(@text-color, @text-value);
+    color: @color!important;
+  }
+
+  & when (@button-textcolor = heading) {
+    .color(@heading-color, @heading-value);
+    color: @color!important;
+  }
+}
+
+.preview-pane .results-view .match-line .preview {
+  .color(@text-color, @text-value);
+  color: @color;
+}
+
+.preview-pane .results-view .match-row .preview {
+  .color(@button-color, @button-value);
+  color: @color;
+}
+
+
+// This shows up on the Search Results pane
+.preview-pane .results-view .match-line.selected .preview,
+.preview-pane .results-view .match-line.selected .line-number {
+  .color(@button-color, @button-value);
+  color: @color;
+}
+
+.preview-pane .results-view .path-match-number {
+  .color(@text-color, @text-value);
+  color: @color;
+}

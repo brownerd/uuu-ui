@@ -1,17 +1,36 @@
-# UUU UI theme
+# UUU-UI theme
 
-This is a UI for UUU. So, make it UUUr way.
+UUU-ui is a package that enables UUU to make your own UI themes from within Atom.
 
-You will want to install:
-[UUU-Syntax]() - Make your own syntax themes in minutes
-[UUU]() - Export and import your syntax and ui themes
+Just watch this overview [video](https://youtu.be/C2N2O3WR-3U)
 
-## Check it out
+## Documentation
+Visit the [UUU](https://uuu.works) site for more info and documentation.
 
-- show split screen
-  - settings left
-  - atom --dev right
+## Installation/Dependencies
+- UUU-UI
+- UUU-SYNTAX
+- UUU-kit
+
+Run the line below in your terminal to  install all dependencies
+`apm install uuu-ui uuu-syntax uuu-kit`
 
 
-## Sceeencast
-- YouTube video on how to do it
+## Make themese quickly
+
+Here are a few examples:
+
+### Schmaterial
+![Schmaterial](images/schmaterial-js.png)
+
+### Melowdrama
+![Melowdrama](images/mellowdrama-js.png)
+
+### SuperNES
+![SuperNES](images/snes-js.png)
+
+### Avengers Endgame
+![Avengers Endgame](images/endgame-js.png)
+
+### Game of Thrones - Ice King of the Whitewalkers
+![Ice King](images/ww-js.png)

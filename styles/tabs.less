@@ -37,7 +37,9 @@
       background-color: @bgcolor;
 
       .color(@background-color, @background-navvalue);
-      color: @color;
+      // choosing to leave the hover text in the tab-bar unchanged atm
+      color: contrast(@bgcolor);
+      //color: @color;
 
       .close-icon {
         .color(@background-color, @background-navvalue);

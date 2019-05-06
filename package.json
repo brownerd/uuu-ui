@@ -3,12 +3,12 @@
   "theme": "ui",
   "main": "./lib/main",
   "version": "0.0.0",
-  "description": "A UI for UUU to customize",
+  "description": "Make the ui styles UUU want in seconds!",
   "keywords": [
     "ui",
     "theme"
   ],
-  "repository": "https://github.com/atom-community/ui-theme-template",
+  "repository": "",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

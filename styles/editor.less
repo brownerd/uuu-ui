@@ -3,8 +3,8 @@
 
 // Mini Editors are the "text inputs" used in find+replace or in the settings.
 
-
 atom-text-editor[mini] {
+//atom-text-editor {
 
   .bgcolor(@button-color, @button-value);
   background-color: @bgcolor;
@@ -56,7 +56,7 @@ atom-text-editor[mini] {
   }
 
   &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
-  &::shadow {
+  &.editor {
     .placeholder-text {
 
       & when (@button-textcolor = background) {

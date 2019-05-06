@@ -20,6 +20,8 @@
   color: @color;
 
 }
+
+.path-name,
 .find-and-replace .options-label .options,
 .project-find .options-label .options,
 .find-and-replace .options-label,
@@ -68,8 +70,8 @@
   }
 
   .highlight-info {
-    .bgcolor(@button-color, @button-value);
-    background-color: @bgcolor;
+    //.bgcolor(@button-color, @button-value);
+    background-color: @button-textcolor;
 
     .color(@text-color, @text-value);
     color: @color;
@@ -131,17 +133,20 @@
 
 }
 
+// Not sure what's going on here. I might need to enable the ::shadow settings again
+
 // How to change find and replace highlight color?
 // https://discuss.atom.io/t/how-to-change-find-and-replace-highlight-color/14750
 
-atom-text-editor::shadow .highlight.find-result .region {
-  .bordercolor(@findAndReplace-borderHighLightColor, @heading-value);
-  border-color: @bordercolor;
+atom-text-editor.editor .highlight.find-result .region {
+  // .bordercolor(@findAndReplace-borderHighLightColor, @heading-value);
+  // border-color: @bordercolor;
   //border-width: 2px;
 }
-atom-text-editor::shadow .highlight.current-result .region,
-atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
-  .bordercolor(@findAndReplace-borderHighLightColorCurrent, @button-value);
-  border-color: @bordercolor;
+
+atom-text-editor.editor .highlight.current-result .region,
+atom-text-editor.editor .highlight.current-result ~ .highlight.selection .region {
+  // .bordercolor(@findAndReplace-borderHighLightColorCurrent, @button-value);
+  // border-color: @bordercolor;
   border-width: 2px;
 }
