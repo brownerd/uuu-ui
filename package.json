@@ -2,8 +2,8 @@
   "name": "uuu-ui",
   "theme": "ui",
   "main": "./lib/main",
-  "version": "1.0.0",
-  "description": "Make ui styles UUU want in seconds!",
+  "version": "0.0.0",
+  "description": "Make the ui styles UUU want in seconds!",
   "keywords": [
     "ui",
     "theme"
