@@ -3,7 +3,7 @@
   "author": "brownerd <ben@brownerd.com>",
   "theme": "ui",
   "main": "./lib/main",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make the ui styles UUU want in seconds!",
   "keywords": [
     "ui",
